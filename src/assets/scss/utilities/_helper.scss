@@ -1,0 +1,265 @@
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid{
+    padding: 0 50px;
+    @include breakpoint($secreen-max-xxl){
+        padding: 0 15px;
+    }
+}
+
+.img-tilt{
+    border-radius: 16px !important;
+}
+
+.heading-h1{
+    font-size: $font-size-h1;
+    line-height: $line-height-h1;
+    font-family: $font-family-DMSans-Bold;
+    @include breakpoint($secreen-xs){
+        font-size: 40px;
+        line-height: 64px;
+    }
+}
+.heading-h2{
+    font-size: $font-size-h2;
+    line-height: $line-height-h2;
+    font-family: $font-family-DMSans-Bold;
+    @include breakpoint($secreen-xs){
+        font-size: 36px;
+        line-height: 56px;
+    }
+}
+.heading-h3{
+    font-size: $font-size-h3;
+    line-height: $line-height-h3;
+    font-family: $font-family-DMSans-Bold;
+    @include breakpoint($secreen-xs){
+        font-size: 28px;
+        line-height: 44px;
+    }
+}
+.heading-h4{
+    font-size: $font-size-h4;
+    line-height: $line-height-h4;
+    font-family: $font-family-DMSans-Bold;
+}
+.heading-h5{
+    font-size: $font-size-h5;
+    line-height: $line-height-h5;
+    font-family: $font-family-DMSans-Bold;
+}
+.body-lb{
+    font-size: $font-size-lb;
+    line-height: $line-height-lb;
+    font-family: $font-family-DMSans-Bold;
+}
+.body-l{
+    font-size: $font-size-lb;
+    line-height: $line-height-lb;
+    font-family: $font-family-DMSans-Regular;
+}
+.body-m{
+    font-size: $font-size-bm;
+    line-height: $line-height-bm;
+    font-family: $font-family-DMSans-Regular;
+}
+.body-mb{
+    font-size: $font-size-bm;
+    line-height: $line-height-bm;
+    font-family: $font-family-DMSans-Bold;
+}
+.body-s{
+    font-size: $font-size-bs;
+    line-height: $line-height-bs;
+    font-family: $font-family-DMSans-Regular;
+}
+.body-sb{
+    font-size: $font-size-bs;
+    line-height: $line-height-bsb;
+    font-family: $font-family-DMSans-Bold;
+}
+.body-xsb{
+    font-size: $font-size-xsb;
+    line-height: $line-height-xsb;
+    font-family: $font-family-DMSans-Bold;
+}
+
+.input{
+    padding: 10px 24px;
+    border-radius: 16px;
+    background-color: $Gray-Shade-4;
+    font-size: $font-size-bs;
+    line-height: $line-height-bsb;
+    font-family: $font-family-DMSans-Bold;
+    color: $Black-Color;
+    border: none;
+    transition: .2s;
+    &:focus{
+        outline: none;
+    }
+    &::placeholder{
+        color: $Gray-Shade-2;
+    }
+}
+
+.btn-fill{
+    padding: 10px 24px;
+    border-radius: 16px;
+    font-size: $font-size-bs;
+    line-height: $line-height-bsb;
+    font-family: $font-family-DMSans-Bold;
+    color: $White-Color;
+    background-color: $Primary-Color-Home-1;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+        color: $Black-Color;
+        background-color: $Secondary-Color-Home-1;
+        transform: translateY(-5px);
+        box-shadow: $box-shadow-custom;
+    }
+    &:active{
+        transition: .5s;
+        transform: scale(.9);
+    }
+}
+
+.btn-outline1{
+    padding: 9px 22px;
+    border-radius: 16px;
+    font-size: $font-size-bs;
+    line-height: $line-height-bsb;
+    font-family: $font-family-DMSans-Bold;
+    color: $Black-Color;
+    border: 1px solid $Primary-Color-Home-1;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+        color: $White-Color;
+        transform: translateY(-5px);
+        background-color: $Primary-Color-Home-1;
+        box-shadow: $box-shadow-custom;
+    }
+    &:active{
+        transition: .5s;
+        transform: scale(.9);
+    }
+}
+
+.btn-outline2{
+    padding: 9px 22px;
+    border-radius: 16px;
+    font-size: $font-size-bs;
+    line-height: $line-height-bsb;
+    font-family: $font-family-DMSans-Bold;
+    color: $Black-Color;
+    border: 1px solid $Primary-Color-Home-1;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+        color: $White-Color;
+        transform: translateY(-5px);
+        background-color: $Primary-Color-Home-1;
+        box-shadow: $box-shadow-custom;
+    }
+    &:active{
+        transition: .5s;
+        transform: scale(.9);
+    }
+}
+
+
+.btn-outline-white{
+    padding: 9px 22px;
+    border-radius: 16px;
+    font-size: $font-size-bs;
+    line-height: $line-height-bsb;
+    font-family: $font-family-DMSans-Bold;
+    color: $White-Color;
+    border: 1px solid $White-Color;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+        color: $Primary-Color-Home-1;
+        transform: translateY(-5px);
+        background-color: $White-Color;
+        box-shadow: $box-shadow-custom;
+    }
+    &:active{
+        transition: .5s;
+        transform: scale(.9);
+    }
+}
+
+.btn-fill-white{
+    padding: 10px 24px;
+    border-radius: 16px;
+    font-size: $font-size-bs;
+    line-height: $line-height-bsb;
+    font-family: $font-family-DMSans-Bold;
+    color: $Primary-Color-Home-1;
+    background-color: $White-Color;
+    transition: .3s;
+    cursor: pointer;
+    &:hover{
+        color: $Primary-Color-Home-1;
+        background-color: $White-Color;
+        transform: translateY(-5px);
+        box-shadow: $box-shadow-custom;
+    }
+    &:active{
+        transition: .5s;
+        transform: scale(.9);
+    }
+}
+
+@keyframes dot-animationr {
+    0%{
+        background-color: $Primary-Color-Home-1;
+    }
+    50%{
+        background-color: $Secondary-Color-Home-1;
+    }
+    100%{
+        background-color: $Primary-Color-Home-1;
+    }
+}

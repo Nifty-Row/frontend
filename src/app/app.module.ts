@@ -1,122 +1,83 @@
-import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MyOrdersComponent } from './my-orders/my-orders.component';
-import { PortfolioComponent } from './my-portfolio/portfolio.component';
-import { AllAssetsComponent } from './all-assets/all-assets.component';
-import { AdminViewComponent } from './admin-view/admin-view.component';
-import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-import { ViewAssetComponent } from './view-asset/view-asset.component';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
-
-import { ComponentsModule } from './components/components.module';
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatRippleModule} from '@angular/material/core';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatSelectModule} from '@angular/material/select';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatTabsModule } from '@angular/material/tabs';
-import { NgxSpinnerModule } from "ngx-spinner"; 
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatRadioModule} from '@angular/material/radio';
-
-
-import {
-  AgmCoreModule
-} from '@agm/core';
-import { AdminComponent } from './admin/admin.component';
-import { IssuerComponent } from './issuer/issuer.component';
-import { RequestPasswordComponent } from './request-password/request-password.component';
-import { ChangePasswordComponent } from './change-password/change-password.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AdminAssetsComponent } from './admin-assets/admin-assets.component';
-import { ApproveAssetsComponent } from './approve-assets/approve-assets.component';
-import { IssueAssetsComponent } from './issue-assets/issue-assets.component';
-import { IssuerDashboardComponent } from './issuer-dashboard/issuer-dashboard.component';
-import { SecondaryViewComponent } from './secondary-view/secondary-view.component';
-import { AboutComponent } from './about/about.component';
-import { AdminSettingsComponent } from './admin-settings/admin-settings.component';
-import { AllUsersComponent } from './all-users/all-users.component';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
+import { MainService } from './core/services/main.service';
+import { CarouselModule} from 'primeng/carousel';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConnectWalletComponent } from './pages/connect-wallet/connect-wallet.component';
+import { AuthenticationComponent } from './pages/authentication/authentication.component';
+import { AboutComponent } from './pages/about/about.component';
+import { AssetsComponent } from './pages/assets/assets.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { CreateAssetsComponent } from './components/create-assets/create-assets.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { CreatorsComponent } from './pages/creators/creators.component';
+import { ngfModule } from "angular-file";
+import { MessagesModule} from 'primeng/messages';
+import { MessageModule} from 'primeng/message';
+import { ToastModule} from 'primeng/toast';
+import { GalleriaModule} from 'primeng/galleria';
+import { AssetDetailsComponent } from './pages/asset-details/asset-details.component';
+import { MyAssetsComponent } from './pages/my-assets/my-assets.component';
+import { CalendarModule} from 'primeng/calendar';
+import {DialogModule} from 'primeng/dialog';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import {ChartModule} from 'primeng/chart';
+import { MintComponent } from './pages/mint/mint.component';
+import { FAQComponent } from './pages/faq/faq.component';
+import { LandingComponent } from './pages/landing/landing.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import {PanelModule} from 'primeng/panel';
 
 @NgModule({
-  imports: [
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    ComponentsModule,
-    RouterModule,
-    AppRoutingModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatRippleModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRadioModule,
-    MatDatepickerModule,
-    MatCheckboxModule,
-    MatSelectModule,
-    MatTooltipModule,
-    MatIconModule,
-    MatCardModule,
-    MatNativeDateModule,
-    MatSidenavModule,
-    MatTabsModule,
-    NgxSpinnerModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
-  ],
   declarations: [
     AppComponent,
-    AdminComponent,
-    AdminDashboardComponent,
-    AdminAssetsComponent,
-    ApproveAssetsComponent,
-    IssuerComponent,
-    RequestPasswordComponent,
-    ChangePasswordComponent,
-    IssueAssetsComponent,
-    IssuerDashboardComponent,
-    LoginComponent,
-    RegisterComponent,
-    SecondaryViewComponent,
-    HomeComponent,
-    ViewAssetComponent,
-    AllAssetsComponent,
-    PortfolioComponent,
-    UserDashboardComponent,
-    MyOrdersComponent,
-    AdminViewComponent,
-    DashboardComponent,
+    ConnectWalletComponent,
+    AuthenticationComponent,
     AboutComponent,
-    AdminSettingsComponent,
-    AllUsersComponent
-
+    AssetsComponent,
+    ContactComponent,
+    CreateAssetsComponent,
+    UserDashboardComponent,
+    CreatorsComponent,
+    AssetDetailsComponent,
+    MyAssetsComponent,
+    MintComponent,
+    FAQComponent,
+    LandingComponent
   ],
-  providers: [
-     {provide: LocationStrategy, useClass: HashLocationStrategy},
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule,
+    HttpClientModule,
+    CarouselModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
+    ngfModule,
+    DialogModule,
+    MessagesModule,
+    MessageModule,
+    ToastModule,
+    GalleriaModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CalendarModule,
+    OverlayPanelModule,
+    ChartModule,
+    PanelModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
-  bootstrap: [AppComponent]
+  providers: [MainService],
+  bootstrap: [AppComponent],
+  exports: [CreateAssetsComponent]
 })
 export class AppModule { }

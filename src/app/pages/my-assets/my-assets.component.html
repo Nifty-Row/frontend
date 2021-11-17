@@ -1,0 +1,63 @@
+<p-toast position="top-center"></p-toast>
+ <!--=======================================
+            Explore Artworks Start Here
+    ========================================-->
+
+    <div class="explore-artwork">
+        <div class="container-fluid">
+            <div class="explore-artwork-inr">
+                <div class="heading-otr">
+                    <div class="head-otr">
+                        <h3 class="heading heading-h3">Explore Artworks</h3>
+                    </div>
+                </div>
+                <div class="teb-main">
+                    <div class="tab-otr">
+                        <div class="tab-inr">
+                            <ul class="tabs"  >
+                                <li class="tab-link tab-1 active" data-tab="1" >
+                                    <p class="tab-p body-sb">All</p>
+                                </li>
+                                <li class="tab-link tab-2" data-tab="2" *ngFor="let category of this.categories">
+                                    <p class="tab-p body-sb" (click)="this.categoryFilter(category)">{{category.replace("Right", "")}}</p>
+                                </li>
+                              
+                            </ul>
+                        </div>
+                        <!-- <div class="slect-main">
+                            <select id="year">
+                                <option class="linkk" value="hide">All Artworks</option>
+                                <option class="linkk" value="2010">All Artworks</option>
+                                <option class="linkk" value="2011">Sort by</option>
+                                <option class="linkk" value="2012">All Artworks</option>
+                                <option class="linkk" value="2013">Sort by</option>
+                            </select>
+                            <select id="week">
+                                <option class="linkk" value="hide">Sort by</option>
+                                <option class="linkk" value="2010">All Artworks</option>
+                                <option class="linkk" value="2011">Sort by</option>
+                                <option class="linkk" value="2012">All Artworks</option>
+                                <option class="linkk" value="2013">Sort by</option>
+                            </select>
+                        </div> -->
+                    </div>
+                </div>
+                <span class="line"></span>
+                <div class="row row-custom-main" >
+                    <div id="tab-1" class="tab-content active">
+                        <div class="row row-custom-inr">    
+                            <div class="col-otr col-lg-3" *ngFor="let item of artworks; trackBy: byId;">
+                                <app-nftcard [artwork]="item"> </app-nftcard>
+                            </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-btn-otr" *ngIf="this.currentPage < this.totalPages">
+                            <div class="col-btn-inr">
+                                <a (click)="loadMore()" class="btn-outline1 btn-more">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>

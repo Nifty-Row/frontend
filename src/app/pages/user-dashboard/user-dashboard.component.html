@@ -1,0 +1,185 @@
+<div class="user-profile-otr">
+    <div class="container-fluid">
+        <div class="wrapper">
+            <div class="user-img" style="background-image: url({{coverImage}});">
+                <div class="creator-img-otr">
+                    <img class="creator-img" src="{{displayImage}}" alt="creator-img">
+                </div>
+            </div>
+            <p-toast position="top-center" ></p-toast>
+            <div class="another-user">
+                <div class="another-user-top">
+                    <div class="another-user-left">
+                        <div class="user-main" >
+                            <h3 class="user-head heading-h4">{{user.username}}</h3>
+                            <div class="check-otr">
+                                <svg class="check-icon" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.813 3.938l-6.126 6.124L2.626 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </div>
+                        <a class="address-main">
+                            <p class="address body-s" *ngIf="account !== undefined"> {{account.substring(0, 5) + 'xxxxx' + account.slice(account.length - 5)}} </p>
+                            <div class="copy-icon-otr">
+                                <svg (click)="copyMessage(account)"  class="copy-icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.636 12.636H15a2 2 0 002-2V3a2 2 0 00-2-2H7.364a2 2 0 00-2 2v2.364" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.636 5.364H3a2 2 0 00-2 2V15a2 2 0 002 2h7.636a2 2 0 002-2V7.364a2 2 0 00-2-2z" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="another-user-right">
+                        <div class="icons-main">
+                            <div class="icon-otr icon-div">
+                                <svg class="icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 15a3 3 0 100-6 3 3 0 000 6zM16.5 21.75a3 3 0 100-6 3 3 0 000 6zM16.5 8.25a3 3 0 100-6 3 3 0 000 6zM13.976 6.872l-5.453 3.506M8.523 13.622l5.454 3.506" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <div class="share-hover">
+                                    <h5 class="heading heading-h5">Share the Link</h5>
+                                    <ul class="icon-ul">
+                                        <li class="icon-li">
+                                            <a class="icon-a">
+                                                <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li">
+                                            <a class="icon-a">
+                                                <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li">
+                                            <a class="icon-a">
+                                                <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li">
+                                            <a class="icon-a">
+                                                <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 11l-4 17M7.693 19.57A10 10 0 1126 14c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li">
+                                            <a class="icon-a">
+                                                <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 16l-6-4v8l6-4z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16c0 3.72.384 5.902.676 7.023a1.99 1.99 0 001.204 1.362C9.065 25.993 16 25.95 16 25.95s6.935.044 11.12-1.564a1.99 1.99 0 001.204-1.362C28.616 21.902 29 19.72 29 16c0-3.72-.384-5.902-.676-7.023a1.99 1.99 0 00-1.205-1.362C22.935 6.007 16 6.05 16 6.05S9.065 6.007 4.88 7.615a1.99 1.99 0 00-1.204 1.362C3.384 10.098 3 12.28 3 16z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </a>
+                                        </li>
+                                        <li class="icon-li">
+                                            <a class="icon-a">
+                                                <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="icon-flag">
+                                <svg class="flag" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 20.25V4.5M3.75 15.75c6-4.5 10.5 4.5 16.5 0V4.5c-6 4.5-10.5-4.5-16.5 0" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                        </div>
+                        <div class="follower-main">
+                            <div class="follow-inr" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                <h5 class="num heading-h5">{{user.followers.length}}</h5>
+                                <p class="body-s follow">Followers</p>
+                            </div>
+                            <div class="follow-inr" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                <h5 class="num heading-h5">{{user.following.length}}</h5>
+                                <p class="body-s follow">Following</p>
+                            </div>
+                        </div>
+                        <div class="action-otr">
+                            <a *ngIf="this.followInfo.followCount < 1" (click)="follow(user.walletAddress)" class="btn-fill btn-follow">Follow</a>
+                            <a *ngIf="this.followInfo.followCount === 1"  class="btn-fill btn-follow">Followed</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="another-user-about">
+                    <div class="another-about-left">
+                        
+                        <div class="col-2">
+                            <h5 class="about-head heading-h5">About Me</h5>
+                        </div>
+                        <div class="col-10">
+                            <p class="body-m about-desc">
+                                {{user.aboutInfo}}
+                            </p>
+                        </div>
+                      
+                    </div>
+                    <div class="another-about-right">
+                        <div class="visto-otr">
+                            <div class="link-icon">
+                                <svg class="link" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.493 3.93l1.774-1.774a3.943 3.943 0 115.577 5.577l-2.535 2.535a3.944 3.944 0 01-5.577 0" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.507 14.07l-1.774 1.774a3.944 3.944 0 11-5.577-5.576l2.535-2.535a3.943 3.943 0 015.577 0" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <a href="{{user.webUrl.url}}" target="_blank" class="visto body-mb">  {{user.webUrl.title}}</a>
+                        </div>
+                        <ul class="icon-ul">
+                            <li class="icon-li" *ngIf="user.socials.facebookUrl">
+                                <a href="{{user.socials.facebookUrl}}" class="icon-a">
+                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                            <li class="icon-li"  *ngIf="user.socials.twitterUrl">
+                                <a href="{{user.socials.twitterUrl}}" class="icon-a">
+                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                            <li class="icon-li"  *ngIf="user.socials.discordUrl">
+                                <a href="{{user.socials.discordUrl}}" class="icon-a">
+                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                            <li class="icon-li"  *ngIf="user.socials.pinterestUrl">
+                                <a href="{{user.socials.pinterestUrl}}" class="icon-a">
+                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 11l-4 17M7.693 19.57A10 10 0 1126 14c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                            <li class="icon-li"  *ngIf="user.socials.youtubeUrl">
+                                <a href="{{user.socials.youtubeUrl}}" class="icon-a">
+                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 16l-6-4v8l6-4z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16c0 3.72.384 5.902.676 7.023a1.99 1.99 0 001.204 1.362C9.065 25.993 16 25.95 16 25.95s6.935.044 11.12-1.564a1.99 1.99 0 001.204-1.362C28.616 21.902 29 19.72 29 16c0-3.72-.384-5.902-.676-7.023a1.99 1.99 0 00-1.205-1.362C22.935 6.007 16 6.05 16 6.05S9.065 6.007 4.88 7.615a1.99 1.99 0 00-1.204 1.362C3.384 10.098 3 12.28 3 16z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                            <li class="icon-li"  *ngIf="user.socials.telegramUrl">
+                                <a href="{{user.socials.telegramUrl}}" class="icon-a">
+                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="explore-artwork">
+    <div class="container-fluid">
+        <div class="explore-artwork-inr">
+            <div class="heading-otr">
+                <div class="head-otr">
+                    <h3 class="heading heading-h3">Explore Artworks</h3>
+                </div>
+            </div>
+            <div class="teb-main">
+                <div class="tab-otr">
+                    <div class="tab-inr">
+                        <ul class="tabs"  >
+                            <li class="tab-link tab-1 active" data-tab="1" >
+                                <p class="tab-p body-sb">All</p>
+                            </li>
+                            <li class="tab-link tab-2" data-tab="2" *ngFor="let category of this.categories">
+                                <p class="tab-p body-sb" (click)="this.categoryFilter(category)">{{category.replace("Right", "")}}</p>
+                            </li>
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="line"></span>
+            <div class="row row-custom-main" >
+                <div id="tab-1" class="tab-content active">
+                    <div class="row row-custom-inr">    
+                        <div class="col-otr col-lg-3" *ngFor="let item of artworks; trackBy: byId;">
+                            <app-nftcard [artwork]="item"> </app-nftcard>
+                        </div>
+                <div class="row">
+                    <div class="col-lg-12 col-btn-otr" *ngIf="this.currentPage < this.totalPages">
+                        <div class="col-btn-inr">
+                            <a (click)="loadMore()" class="btn-outline1 btn-more">Load More</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>

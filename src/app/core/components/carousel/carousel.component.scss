@@ -1,0 +1,135 @@
+
+@import 'src/assets/scss/utilities/screens';
+@import 'src/assets/scss/utilities/mixins';
+@import 'src/assets/scss/utilities/variables';
+@import 'src/assets/scss/utilities/settings';
+
+/* You can add global styles to this file, and also import other style files */
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.explore-artwork{
+    overflow: hidden;
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .explore-artwork-inr{
+            .heading-otr{
+                .head-otr{
+                    display: flex;
+                    align-items: center;
+                    .heading{
+                        color: $Black-Color;
+                    }
+                }
+            }
+            .teb-main{
+                @include breakpoint($secreen-xl2){
+                    overflow-x: scroll;
+                }
+                &::-webkit-scrollbar {
+                    width: 100%;
+                    height: .1px;
+                    background-color: #EEEEEE;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #ACACAC;
+                    border-radius: 2px;
+                }
+                .tab-otr{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include breakpoint($secreen-xl2){
+                        width: 1100px;
+                    }
+                    .tab-inr{
+                        .tabs{
+                            display: flex;
+                            align-items: center;
+                            .tab-link{
+                                margin-top: 24px;
+                                &:not(:last-child){
+                                    margin-right: 24px;
+                                }
+                                .tab-p{
+                                    padding: 4px 16px;
+                                    border-radius: 12px;
+                                    background-color: $Gray-Shade-4;
+                                    color: $Gray-Shade-1;
+                                    transition: .3s;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                            .active{
+                                .tab-p{
+                                    background-color: $Primary-Color-Home-1;
+                                    color: $White-Color;
+                                }
+                            }
+                        }
+                    }
+                    .slect-main{
+                        display: flex;
+                        align-items: center;
+                        .select {
+                            cursor: pointer;
+                            display: inline-block;
+                            position: relative;
+                            margin-top: 24px;
+                            &:not(:last-child){
+                                margin-right: 24px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .line{
+                display: flex;
+                flex: 1;
+                height: 1px;
+                background-color: $Gray-Shade-3;
+                margin: 48px 0;
+            }
+            .row-custom-main{
+                .tab-content{
+                    display: none;
+                    opacity: 0;
+                    transform: translateY(15px);
+                    animation: fadeIn 0.5s ease 1 forwards;
+                }
+                .active{
+                    display: block;
+                }
+                .col-btn-otr{
+                    .col-btn-inr{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 48px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.col-lg-3 {
+    flex: 0 0 auto;
+    width: 100% !important;
+}
+
+.row>* {
+    flex-shrink: 0;
+    /* width: 100%; */
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);
+}
+

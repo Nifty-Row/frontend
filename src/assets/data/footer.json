@@ -1,0 +1,68 @@
+[
+    { 
+        "menuGroup": [
+            {
+                "title": "Navigation",
+                "menu": [
+                    {
+                        "title": "Home",
+                        "url": ""
+                    },
+                    {
+                        "title": "Explore",
+                        "url": ""
+                    },
+                    {
+                        "title": "About",
+                        "url": "/about"
+                    },
+                    {
+                        "title": "Contact Us",
+                        "url": "/contact"
+                    },
+                    {
+                        "title": "Community",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "title": "Explore",
+                "menu": [
+                    {
+                        "title": "Explore Artworks",
+                        "url": ""
+                    },
+                    {
+                        "title": "Single Artwork",
+                        "url": ""
+                    },
+                    {
+                        "title": "Explore Creators",
+                        "url": ""
+                    },
+                    {
+                        "title": "Single Creator",
+                        "url": ""
+                    }
+                ]
+            },
+            {
+                "title": "Community",
+                "menu": [
+                    {
+                        "title": "Blog",
+                        "url": ""
+                    },
+                    {
+                        "title": "Help center",
+                        "url": "/faq"
+                    }
+                ]
+            }
+
+        ],
+        "logoPath": "/assets/img/Niftylogo2.png"
+
+    }
+]

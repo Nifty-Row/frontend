@@ -1,0 +1,410 @@
+
+    <!--=======================================
+            Hero Single ArtworK Start Here
+    ========================================-->
+    <p-dialog [(visible)]="displayOverlay" [modal]="true" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false"  [breakpoints]="{'960px': '75vw', '640px': '83vw'}" [style]="{width: '30vw'}">
+    <ng-template pTemplate="header">
+        <h4 class="head-2 heading-h4">Buyer Registration</h4>
+    </ng-template>
+    <form class="form-main" method="post"  #registerForm="ngForm">
+        <span class="select-none heading-h5">Please complete the form below: </span>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="firstName" name="firstName" [(ngModel)]="firstName" placeholder="First Name" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="middleName" name="middleName" [(ngModel)]="middleName" placeholder="Middle Name" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="lastName" name="lastName" [(ngModel)]="lastName" placeholder="Last Name" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="Email" name="email" [(ngModel)]="email" placeholder="Email" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="phone" id="phone" name="phone" [(ngModel)]="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="input-main">
+            <div class="input-otr-2" id="issuerInput">
+                <input style="width: 100%;" class="input" [(ngModel)]="country" type="text" name="country" placeholder="Country" required>
+            </div>
+            <div class="input-otr-2" id="issuerInput">
+                <input style="width: 100%;" [(ngModel)]="zipCode" class="input" type="text" name="zipCode" placeholder="ZipCode " required>
+            </div>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="state" name="state" [(ngModel)]="state" placeholder="State" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="city" name="city" [(ngModel)]="city" placeholder="City" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="street" name="street" [(ngModel)]="street" placeholder="Street" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="houseNumber" name="houseNumber" [(ngModel)]="houseNumber" placeholder="House Number" required>
+        </div>
+    </form>
+    <ng-template pTemplate="footer">
+
+        <p-button icon="pi pi-check" (click)="register(registerForm)" label="Register" class="p-button-text"></p-button>
+        <p-button icon="pi pi-times" (click)="displayModal=false" label="Cancel"></p-button>
+    </ng-template>
+</p-dialog>
+ 
+    <p-toast position="top-center"></p-toast>
+    
+    <div class="row">
+        <div class="col-lg-6" id="assetMedia">
+            <div class="hero-single-artwork">
+                <div class="container-fluid">
+                    <div class="hero-inr" style="padding-top: 25px;">
+                        <div [ngSwitch]="artwork.category">
+                            <a class="img-otr img-tilt" id="anchorMedia" data-tilt   *ngSwitchDefault>
+                                <img class="img-artwork img-fluid"  src="{{artwork.featuredImage.media}}" alt="artwork-img">
+                            </a>
+                            <a class="img-otr img-tilt" data-tilt  *ngSwitchCase="'musicRight'">
+                                <img class="img-artwork img-fluid" src="{{artwork.featuredImage.media}}" alt="artwork-img">
+                                <audio class="AudioPlayerV1" style="width: 100%;"  controls controlsList="nodownload">
+                                    <source src="{{artwork.gallery[1]['media']}}" type="audio/mp3" />
+                                    <source src=" {{artwork.gallery[1]['media']}} " type="audio/ogg" />
+                                </audio>
+                            </a>
+                            <a href="" class="tilt-otr img-tilt"  id="anchorMedia" data-tilt  *ngSwitchCase="'movieRight'">
+                                <video class="img-artwork img-fluid" style="object-fit: contain; width: 100%; height: 640px;"   controls controlsList="nodownload">
+                                    <source src=" {{artwork.gallery[1]['media']}}" type="video/mp4" />
+                                    <source src="{{artwork.gallery[1]['media']}}" type="video/webm" />
+                                    <source src=" {{artwork.gallery[1]['media']}}" type="video/ogg" />
+                                </video>
+                            </a>
+                        </div> 
+                        <div class="icons-div">
+                            <div class="icons-div-inr">
+                                <div class="heart-main icon-div">
+                                    <a class="heart-otr">
+                                        <svg class="heart-icon" width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 15.08S1 10.6 1 5.16a4.16 4.16 0 018-1.603h0a4.16 4.16 0 018 1.603c0 5.44-8 9.92-8 9.92z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </a>
+                                    <p class="body-sb num">227 Likes</p>
+                                </div>
+                                <div class="icon-otr icon-share icon-div">
+                                    <svg class="icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 15a3 3 0 100-6 3 3 0 000 6zM16.5 21.75a3 3 0 100-6 3 3 0 000 6zM16.5 8.25a3 3 0 100-6 3 3 0 000 6zM13.976 6.872l-5.453 3.506M8.523 13.622l5.454 3.506" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="share-hover">
+                                        <h5 class="heading heading-h5">Share the Link</h5>
+                                        <ul class="icon-ul">
+                                            <li class="icon-li">
+                                                <a href="" class="icon-a">
+                                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </a>
+                                            </li>
+                                            <li class="icon-li">
+                                                <a href="" class="icon-a">
+                                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </a>
+                                            </li>
+                                            <li class="icon-li">
+                                                <a href="" class="icon-a">
+                                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </a>
+                                            </li>
+                                            <li class="icon-li">
+                                                <a href="" class="icon-a">
+                                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 11l-4 17M7.693 19.57A10 10 0 1126 14c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </a>
+                                            </li>
+                                            <li class="icon-li">
+                                                <a href="" class="icon-a">
+                                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 16l-6-4v8l6-4z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16c0 3.72.384 5.902.676 7.023a1.99 1.99 0 001.204 1.362C9.065 25.993 16 25.95 16 25.95s6.935.044 11.12-1.564a1.99 1.99 0 001.204-1.362C28.616 21.902 29 19.72 29 16c0-3.72-.384-5.902-.676-7.023a1.99 1.99 0 00-1.205-1.362C22.935 6.007 16 6.05 16 6.05S9.065 6.007 4.88 7.615a1.99 1.99 0 00-1.204 1.362C3.384 10.098 3 12.28 3 16z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </a>
+                                            </li>
+                                            <li class="icon-li">
+                                                <a href="" class="icon-a">
+                                                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="icon-otr icon-div">
+                                    <svg class="icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 20.25V4.5M3.75 15.75c6-4.5 10.5 4.5 16.5 0V4.5c-6 4.5-10.5-4.5-16.5 0" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="circle"></span>
+                    </div>
+                </div>
+                <img class="circle-1" src="../assets/img/svg/circles-1.svg" alt="circale">
+                <img class="circle-2" src="../assets/img/svg/circles-2.svg" alt="circale">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="artwork-body">
+                <div class="container-fluid">
+                    <div class="artwork-body-inr">
+                        <div class="row row-custom">
+                            <div class="col-lg-12 col-left-otr">
+                                <div class="col-left-inr">
+                                    <div class="user-main-otr">
+                                        <div class="create-otr">
+                                            <div class="create-inr">
+                                                <a class="create-img">
+                                                    <img class="img-create" src="{{artwork.owner.image}}" alt="create-img">
+                                                    <div class="check-otr">
+                                                        <svg class="check-icon" width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.438 2.813L4.061 7.188 1.876 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                    </div>
+                                                </a>
+                                                <div class="create-content">
+                                                    <p class="body-s create-p">Owned by</p>
+                                                    <a  class="body-sb create-pb">{{artwork.owner.username.substring(0, 4) + 'xxxxx' + artwork.owner.username.slice(artwork.owner.username.length - 4)}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="create-otr">
+                                            <div class="create-inr">
+                                                <a class="create-img">
+                                                    <img class="img-create" src="{{artwork.creator.image}}" alt="create-img">
+                                                    <div class="check-otr">
+                                                        <svg class="check-icon" width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.438 2.813L4.061 7.188 1.876 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                    </div>
+                                                </a>
+                                                <div class="create-content">
+                                                    <p class="body-s create-p">Created by</p>
+                                                    <a class="body-sb create-pb">{{artwork.creator.username.substring(0, 4) + 'xxxxx' + artwork.creator.username.slice(artwork.creator.username.length - 4)}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://testnet.bscscan.com/token/0x6dbb11e6babd021d305145b8d92a80a41885f065?a={{artwork.tokenId}}" target="_blank" class="body-sb create-pb" style="margin-top: 10px;"> 
+                                        {{artwork.tokenId}} - Verify <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#54bef2" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M200,224.00005H55.99219a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8L152,32l56,56v128A8,8,0,0,1,200,224.00005Z" fill="none" stroke="#54bef2" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path><polyline points="148 32 148 92 208.008 92" fill="none" stroke="#54bef2" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><circle cx="123.9941" cy="148" r="24" fill="none" stroke="#54bef2" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></circle><line x1="140.96467" y1="164.97053" x2="159.79313" y2="183.79899" fill="none" stroke="#54bef2" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+                                    </a>
+                                    <h2 class="heading-h2 head">
+                                       {{artwork.symbol}}
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-custom">
+                            <div class="col-lg-12 col-right-otr">
+                                    <div class="col-right-inr">
+                                        <div class="bid-details">
+                                            <h4 class="heading-h4 bid-head">Bid Details</h4>
+                                            <div class="boxes-main">
+                                                <div class="bid-main">
+                                                    <p class="bid body-mb">Current Bid</p>
+                                                    <h3 class="heading-h3 bid-head"  *ngIf="auction.bids.length <= 0">{{auction.highestBid}} {{auction.currency}}</h3>
+                                                    <h3 class="heading-h3 bid-head" *ngIf="auction.bids.length > 0">{{auction.bids[0]['bid']}} {{auction.currency}}</h3>
+                                                    <p class="dollor body-mb">{{this.auctionValue | currency}}</p>
+                                                </div>
+                                                <div class="auction-main">
+                                                    <p class="body-mb acution" *ngIf="auctionTime > currentTime">Auction Ending</p>
+                                                    <div id="clock" class="timer" *ngIf="auctionTime > currentTime">
+                                                        <div class="hours-main main" *ngIf="countdownDay > 0">
+                                                            <p class="heading-h3 time-inr" id="days"></p>
+                                                            <p class="hours-p body-mb"> {{this.countdownDay}} Days</p>
+                                                        </div>
+                                                        <div class="hours-main main">
+                                                            <p class="heading-h3 time-inr" id="hours"></p>
+                                                            <p class="hours-p body-mb"> {{this.countdownHours}} Hours</p>
+                                                        </div>
+                                                        <div class="minutes-main main">
+                                                            <p class="heading-h3 time-inr" id="minutes"></p>
+                                                            <p class="minutes-p body-mb"> {{this.countdownMinutes}} Minutes</p>
+                                                        </div>
+                                                        <div class="seconds-main main" *ngIf="countdownDay < 0">
+                                                            <p class="heading-h3 time-inr" id="seconds"></p>
+                                                            <p class="seconds-p body-mb"> {{this.countdownSeconds}} Seconds</p>
+                                                            <!-- <p class="seconds-p-2 body-mb">Sec</p> -->
+                                                        </div>
+                                                    </div>
+            
+                                                    <div id="clock" class="timer" *ngIf="auctionTime < currentTime">
+                                                        <p class="hours-p body-mb" style="margin-top: 30px;"> Auction Ended</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <form *ngIf="visible && !this.owner && auctionTime > currentTime" [@slideInOut] #buyForm="ngForm" novalidate >
+                                                <div class="input-main">
+                                                    <div class="input-otr-2">
+                                                        <input class="input" style="width: 100%;
+                                                        margin-bottom: 25px;
+                                                        font-size: 20px;
+                                                        background-color: white;" type="text" name="amount" [(ngModel)]="amount" placeholder="current Bid: {{auction.highestBid}} ETH"  type="number" id="amount" name="amount"required>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="action-otr" *ngIf="visible">
+                                                    <a (click)="bid()" class="btn-fill btn-bid">Place a Bid</a>
+                                                </div>
+                                            </form>
+                                            <form *ngIf="visible && this.owner && artwork.hasActiveAuction === false" [@slideInOut] #auctionForm="ngForm" novalidate >
+                                                <div class="input-main">
+                                                    <div class="input-otr-2">
+                                                        <div class="input" style="width: 100%;
+                                                        margin-bottom: 25px;
+                                                        font-size: 20px;
+                                                        background-color: white;">
+                                                        <label class="col-6 input" style="color: darkgrey;
+                                                        margin-bottom: 25px;
+                                                        font-size: 20px;
+                                                        background-color: white;">Start Date</label>
+                                                        <p-calendar class="col-2"  name="startDate" [(ngModel)]="startDate" id="startDate" [showIcon]="true" inputId="icon" [touchUI]="true" [readonlyInput]="true">
+                                                        </p-calendar>
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="input-main">
+                                                    <div class="input-otr-2">
+                                                        <div class="input" style="width: 100%;
+                                                        margin-bottom: 25px;
+                                                        font-size: 20px;
+                                                        background-color: white;">
+                                                        <label class="col-6 input" style="color: darkgrey;
+                                                        margin-bottom: 25px;
+                                                        font-size: 20px;
+                                                        background-color: white;">End Date</label>
+                                                        <p-calendar class="col-2" name="endDate" [(ngModel)]="endDate" id="endDate" [showIcon]="true" inputId="icon" [touchUI]="true" [readonlyInput]="true">
+                                                        </p-calendar>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="input-main">
+                                                    <div class="input-otr-2">
+                                                        <input class="input" style="width: 100%;
+                                                        margin-bottom: 25px;
+                                                        font-size: 20px;
+                                                        background-color: white;" type="text" id="sellNowPrice" [(ngModel)]="sellNowPrice" name="sellNowPrice" placeholder="Sell-Now Price"  required>
+                                                    </div>
+                                                </div>
+                                                <div class="input-main">
+                                                    <div class="input-otr-2">
+                                                        <input class="input" style="width: 100%;
+                                                        margin-bottom: 25px;
+                                                        font-size: 20px;
+                                                        background-color: white;"  type="number" id="minimumPrice" [(ngModel)]="minimumPrice" name="minimumPrice" placeholder="Minimum Price" required>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="action-otr" *ngIf="visible">
+                                                    <a (click)="startAuction(auctionForm)" class="btn-fill btn-bid">Start Auction</a>
+                                                </div>
+                                            </form>
+                                            <div class="action-otr" *ngIf="this.owner && artwork.hasActiveAuction === true">
+                                                <a  class="btn-fill btn-bid">Withdraw</a>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="artwork-body">
+                <div class="container-fluid">
+                    <div class="artwork-body-inr">
+                        <div class="row row-custom">
+                            <div class="col-lg-6 col-right-otr">
+                                <p-panel class="heading-h4 activity-head" styleClass="ark-panel" header="Description" [toggleable]="true">
+                                    <p class="body-m desc para1">
+                                        {{artwork.description}}
+                                    </p>
+                                </p-panel>
+                            </div>
+                            <div class="col-lg-6 col-right-otr" id="panel">
+                                <p-panel class="heading-h4 activity-head"  styleClass="ark-panel" header="Asset Details" [toggleable]="true">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-right-otr">
+                                            <span class="bid">Issuing Contract Address:</span>
+                                        </div>
+                                        <div class="col-lg-6 col-right-otr">
+                                            <a class="user"> {{artwork.owner.username.substring(0, 4) + 'xxxxx' + artwork.owner.username.slice(artwork.owner.username.length - 4)}} </a>  
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-right-otr">
+                                            <span class="bid">Token ID:</span>
+                                        </div>
+                                        <div class="col-lg-6 col-right-otr">
+                                            <a href="https://testnet.bscscan.com/token/0x6dbb11e6babd021d305145b8d92a80a41885f065?a={{artwork.tokenId}}" target="_blank" class="body-sb create-pb" style="margin-top: 10px;"> 
+                                                {{artwork.tokenId}} - Verify <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#54bef2" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M200,224.00005H55.99219a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8L152,32l56,56v128A8,8,0,0,1,200,224.00005Z" fill="none" stroke="#54bef2" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path><polyline points="148 32 148 92 208.008 92" fill="none" stroke="#54bef2" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><circle cx="123.9941" cy="148" r="24" fill="none" stroke="#54bef2" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></circle><line x1="140.96467" y1="164.97053" x2="159.79313" y2="183.79899" fill="none" stroke="#54bef2" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-right-otr">
+                                            <span class="bid">Blockchain:</span>
+                                        </div>
+                                        <div class="col-lg-6 col-right-otr">
+                                            Ethereum
+                                        </div>
+                                    </div>
+                                </p-panel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="artwork-body">
+                <div class="container-fluid">
+                    <div class="artwork-body-inr">
+                        <div class="row row-custom">
+                            <div class="col-lg-12 col-right-otr">
+                                <p-panel class="activity-details" [toggleable]="true" >
+                                    <ng-template pTemplate="header" >
+                                        <h4 class="heading-h4 activity-head">Activity</h4>
+                                    </ng-template>
+                                    <div class="col-right-inr">
+                                        <div class="activity-details" *ngIf="auction.bids.length > 0">
+                                            <h6 class="heading-h4 activity-head">Recent bid history</h6>
+                                            <div class="place-bid-main" *ngFor="let bids of auction.bids">
+                                                <a  class="img-otr">
+                                                    <img class="img-creator" src="../assets/img/user-Image16.jpg" alt="creator-img">
+                                                </a>
+                                                <div class="bid-content" >
+                                                    
+                                                    <div class="content-left" >
+                                                        <p class="body-mb bid-otr"> 
+                                                            <span class="bid">Bid placed</span>
+                                                            <span class="by body-m"> by</span>
+                                                            <a class="user"> {{bids.bidder.substring(0, 4) + 'xxxxx' + bids.bidder.slice(bids.bidder.length - 4)}} </a>    
+                                                        </p>
+                                                        <!-- <p class="body-s date">
+                                                            At 2:30 PM on 19th June, 2021
+                                                        </p> -->
+                                                    </div>
+                                                    <div class="content-right">
+                                                        <p class="eth heading-h5"> {{bids.bid}} ETH</p>
+                                                        <!-- <p class="dollor body-sb">$2,505</p> -->
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="activity-details" *ngIf="auction.bids.length <= 0">
+                                            <div class="place-bid-main">
+                                                <p class="hours-p body-mb" style="margin-top: 30px; text-align: center;"> No Bids Yet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </p-panel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--=======================================
+        Hero Single ArtworK End Here
+========================================-->
+

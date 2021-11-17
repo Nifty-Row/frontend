@@ -1,0 +1,57 @@
+
+      <!--=======================================
+            Letest Blog's Start Here
+    ========================================-->
+
+    <div class="letest-blog-main">
+        <div class="container-fluid">
+            <div class="latest-blog-inr">
+                <div class="heading-otr">
+                    <h3 class="heading heading-h3">Latest Posts from our blog</h3>
+                    <a href="" class="view-all">
+                        <p class="View-p body-sb">Read All Posts</p>
+                        <svg class="arrow-icon" width="18" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#366CE3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <span class="line"></span>
+                <div class="row row-custom">
+                    <p-carousel [value]="blog" [numVisible]="2" [numScroll]="1" [responsiveOptions]="responsiveOptions"  [showIndicators]="true">
+                        <ng-template let-item pTemplate="item">
+                            <div class="col-lg-6 col-otr">
+                                <div class="col-inr box1">
+                                    <div class="img-main">
+                                        <a href="{{item.mainLink}}" class="img-otr">
+                                            <img class="img" src="{{item.image}}" alt="artwork-img">
+                                        </a>
+                                        <div class="content">
+                                            <div class="title-main body-sb">
+                                                <p class="title">{{item.title}}</p>
+                                                <span class="dot">•</span>
+                                                <p class="date">{{item.date}}</p>
+                                            </div>
+                                            <a href="pages/Blog-Detail.html" class="box-head heading-h4">{{item.heading}}</a>
+                                        </div>
+                                    </div>
+                                    <p class="desc body-m">
+                                        {{item.body}}
+                                    </p>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                    
+                </div>
+                <div class="responsive">
+                    <a href="" class="view-all">
+                        <p class="View-p body-sb">Read All Blogs</p>
+                        <svg class="arrow-icon" width="18" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8h16M10.455 1.455L17 8l-6.545 6.545" stroke="#366CE3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--=======================================
+        Letest Blog's End Here
+========================================-->
+

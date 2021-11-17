@@ -1,0 +1,165 @@
+
+[
+    {
+      "slides":  [
+        {
+            "auctionId": "121266",
+            "cancelled": false,
+            "currentBlock": 8692775,
+            "startBlock": 8606375,
+            "endBlock": 8692775,
+            "highestBid": 0.2,
+            "highestBidder": "0x0000000000000000000000000000000000000000",
+            "isActive": true,
+            "owner": "0x138eA87255926B6FA5F428079F5266A6693B8738",
+            "sellNowPrice": 0.4,
+            "title": "The Mystic",
+            "subtitle": "The mystical artworks of the kubembe",
+            "currentBid": 0.3,
+            "currency": "ETH",
+            "endDate": "2021-05-09T14:01:08.000Z",
+            "startDate": "2021-05-06T14:01:05.578Z",
+            "minimumBid": 0.2,
+            "tokenId": "710246",
+            "artwork": {
+                "id": "reno",
+                "category": "artwork",
+                "tags": ["art", "away"],
+                "owner": {
+                    "id": "OGW",
+                    "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "username": "Ndo"
+                },
+                "creator": {
+                    "id": "Rew",
+                    "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "username": "Ndo",
+                    "collections": [],
+                    "type": "Creator"
+                },
+                "featuredImage": {
+                    "media": "/assets/img/slide1.jpeg",
+                    "mediaType": 0
+                },
+                "isBidding": true,
+                "gallery": [{
+                    "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "mediaType": 0
+                }],
+                "description": "Description",
+                "price": 23,
+                "currency": "ETH",
+                "likes": [34],
+                "type": "Artwork"
+            },
+            "type": "Auction"
+        },
+        
+        {
+            "auctionId": "121266",
+            "cancelled": false,
+            "currentBlock": 8692775,
+            "startBlock": 8606375,
+            "endBlock": 8692775,
+            "highestBid": 0.2,
+            "highestBidder": "0x0000000000000000000000000000000000000000",
+            "isActive": true,
+            "owner": "0x138eA87255926B6FA5F428079F5266A6693B8738",
+            "sellNowPrice": 0.4,
+            "title": "The Mystic",
+            "subtitle": "The mystical artworks of the kubembe",
+            "currentBid": 0.3,
+            "currency": "ETH",
+            "endDate": "2021-05-09T14:01:08.000Z",
+            "startDate": "2021-05-06T14:01:05.578Z",
+            "minimumBid": 0.2,
+            "tokenId": "710246",
+            "artwork": {
+                "id": "reno",
+                "category": "artwork",
+                "tags": ["art", "away"],
+                "owner": {
+                    "id": "OGW",
+                    "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "username": "Ndo"
+                },
+                "creator": {
+                    "id": "Rew",
+                    "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "username": "Ndo",
+                    "collections": [],
+                    "type": "Creator"
+                },
+                "featuredImage": {
+                    "media": "/assets/img/slide3.jpeg",
+                    "mediaType": 0
+                },
+                "isBidding": true,
+                "gallery": [{
+                    "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "mediaType": 0
+                }],
+                "description": "Description",
+                "price": 23,
+                "currency": "ETH",
+                "likes": [34],
+                "type": "Artwork"
+            },
+            "type": "Auction"
+        },
+        {
+            "auctionId": "121266",
+            "cancelled": false,
+            "currentBlock": 8692775,
+            "startBlock": 8606375,
+            "endBlock": 8692775,
+            "highestBid": 0.2,
+            "highestBidder": "0x0000000000000000000000000000000000000000",
+            "isActive": true,
+            "owner": "0x138eA87255926B6FA5F428079F5266A6693B8738",
+            "sellNowPrice": 0.4,
+            "title": "The Mystic",
+            "subtitle": "The mystical artworks of the kubembe",
+            "currentBid": 0.3,
+            "currency": "ETH",
+            "endDate": "2021-05-09T14:01:08.000Z",
+            "startDate": "2021-05-06T14:01:05.578Z",
+            "minimumBid": 0.2,
+            "tokenId": "710246",
+            "artwork": {
+                "id": "reno",
+                "category": "artwork",
+                "tags": ["art", "away"],
+                "owner": {
+                    "id": "OGW",
+                    "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "username": "Ndo"
+                },
+                "creator": {
+                    "id": "Rew",
+                    "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "username": "Ndo",
+                    "collections": [],
+                    "type": "Creator"
+                },
+                "featuredImage": {
+                    "media": "/assets/img/slide5.jpeg",
+                    "mediaType": 0
+                },
+                "isBidding": true,
+                "gallery": [{
+                    "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+                    "mediaType": 0
+                }],
+                "description": "Description",
+                "price": 23,
+                "currency": "ETH",
+                "likes": [34],
+                "type": "Artwork"
+            },
+            "type": "Auction"
+        }
+      ],
+    "presentationType": "auction"
+    }
+]

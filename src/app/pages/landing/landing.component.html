@@ -1,0 +1,752 @@
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Nifty Row - NFT Marketplace</title>
+    <link rel="preconnect" href="https://mc.us6.list-manage.com">
+    <link rel="preconnect" href="https://chimpstatic.com">
+    <link rel="preconnect" href="http://downloads.mailchimp.com">
+    <link rel="preconnect" href="http://mc.us6.list-manage.com">
+    <link rel="preconnect" href="https://google-analytics.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="img/core-img/Nifty-iconsm.png"> -->
+
+
+
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <!-- Preload Stylesheet -->
+    <link rel="preload"  href="/assets/css/style.css" as="style">
+    <link rel="preload"  href="/assets/css/font-icons.css" as="style">
+    <link rel="preload"  href="/assets/css/responsive.css" as="style">
+    <link rel="preload"  href="/assets/css/cryptocoins.css" as="style" >
+    <link rel="preload"  href="/assets/css/themify-icons.css" as="style">
+    <link rel="preload"  href="/assets/css/animated-headline.css" as="style">
+    <link rel="preload"  href="/assets/css/magnific-popup.css" as="style">
+    <link rel="preload"  href="/assets/css/font-awesome.min.css" as="style">
+    <link rel="preload"  href="/assets/css/owl.carousel.min.css" as="style">
+    <link rel="preload"  href="/assets/css/dzsparallaxer.css" as="style">
+    <link rel="preload"  href="/assets/css/classy-nav.min.css" as="style">
+    <link rel="preload"  href="/assets/css/about-sonar.css" as="style">
+    <link rel="preload"  href="/assets/css/animate.css" as="style">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet"  href="/assets/css/style.min.css">
+  
+
+</head>
+
+
+<body class="light-version">
+        <!--=======================================
+                Navbar Start Here
+    ========================================-->
+
+    <div class="navbar-main">
+        <div class="container-fluid">
+            <div class="navbar-inr">
+                <div class="logo-otr">
+                    <a href="./" class="logo-inr">
+                        <img  class="logo" src="{{this.headerInfo.logoPath}}" alt="Nifty Row">
+                    </a>
+                    
+                </div>
+                <div class="head-otr" >
+                  <h1 id="logoText" class="heading-h1 heading titleGreathorned">
+                  Nifty Row
+                  </h1>
+                </div>
+                <app-search></app-search>
+                <div class="navigation-otr">
+                    <ul class="navigation-inr">
+                            <li class="nav-li"><a class="nav-a body-sb" [routerLink]="['./']" fragment="blog">Blog</a></li>
+                            <li class="nav-li"><a class="nav-a body-sb" [routerLink]="['./']" fragment="services" >Services</a></li>
+                            <li class="nav-li"><a class="nav-a body-sb" [routerLink]="['./']" fragment="roadmap">Roadmap</a></li>
+                            <!-- <li class="nav-li"><a class="nav-a body-sb" href="#team">Team</a></li> -->
+                            <li class="nav-li"><a class="nav-a body-sb" [routerLink]="['./']" fragment="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="action-otr">
+                    <a routerLink= "/demo" class="btn-fill btn-create">Demo</a>
+                </div>
+                <div class="burger-menu">
+                    <div class="burger-icon-otr">
+                        <svg class="burger-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 12h16.5M4 6h9M11 18h9" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <section class="welcome_area clearfix dzsparallaxer auto-init none fullwidth" data-options='{direction: "normal"}' id="home" *ngIf="landingData">
+      
+      
+        <div class="divimage" style="width: 101%; height: 130%; background-image: url({{landingData.welcomeArea.backgroundImage}})"></div>
+    
+        <div class="hero-content transparent">
+    
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <!-- Welcome Content -->
+                    <div class="col-12 col-lg-6 col-md-12">
+                        <div class="welcome-content">
+                            <div class="card" style="margin-bottom: 10px; opacity: 90%; background: #7253A0;">
+                                <h1 style="color: white; margin-left: 5%;" class="fadeInUp" data-wow-delay="0.2s"> {{landingData.welcomeArea.title}} </h1>
+                                <p style="color: white !important; margin-left: 5%;" class="w-text fadeInUp" data-wow-delay="0.3s">{{landingData.welcomeArea.subText}}</p>
+                            </div>
+    
+                            <div class="dream-btn-group fadeInUp" data-wow-delay="0.4s">
+                                <!-- <a href="#contact" class="btn dream-btn mr-3">Join Pre-Sale</a> -->
+                                <a href="{{landingData.welcomeArea.pdfLink}}" class="btn dream-btn"> Deck</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+      
+    </section>
+    
+    
+    <div class="vertical-social" *ngIf="landingData">
+        <ul class="icon-ul">
+            <li class="icon-li">
+                <a href="{{landingData.verticalSocial.facebookUrl}}" class="icon-a">
+                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </li>
+            <li class="icon-li" style="margin-top: 10px; margin-bottom: 10px;">
+                <a href="{{landingData.verticalSocial.twitterUrl}}" class="icon-a">
+                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </li>
+            <li class="icon-li" style="margin-top: 10px; margin-bottom: 10px;">
+                <a href="{{landingData.verticalSocial.pinterestUrl}}" class="icon-a">
+                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </li>
+            <li class="icon-li" style="margin-top: 10px; margin-bottom: 10px;">
+                <a href="" class="icon-a">
+                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 11l-4 17M7.693 19.57A10 10 0 1126 14c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </li>
+            <li class="icon-li" style="margin-top: 10px; margin-bottom: 10px;">
+                <a href="" class="icon-a">
+                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 16l-6-4v8l6-4z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16c0 3.72.384 5.902.676 7.023a1.99 1.99 0 001.204 1.362C9.065 25.993 16 25.95 16 25.95s6.935.044 11.12-1.564a1.99 1.99 0 001.204-1.362C28.616 21.902 29 19.72 29 16c0-3.72-.384-5.902-.676-7.023a1.99 1.99 0 00-1.205-1.362C22.935 6.007 16 6.05 16 6.05S9.065 6.007 4.88 7.615a1.99 1.99 0 00-1.204 1.362C3.384 10.098 3 12.28 3 16z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </li>
+            <li class="icon-li" style="margin-top: 10px; margin-bottom: 10px;">
+                <a href="" class="icon-a">
+                    <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Buy/Sell Artworks Section -->
+        <section class="demo-video features section-padding-100"  style="background:url('/assets/img/svg/bg_hero.svg') no-repeat center right" *ngIf="landingData">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2 class="b-text fadeInUp" data-wow-delay="0.3s">{{landingData.buyOrSellSection.title}}</h2>
+                    <!--  <p class="fadeInUp" data-wow-delay="0.4s" style="color:#888">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>-->
+                </div>
+                <!-- Welcome Video Area -->
+                <div class="row">
+                    <div class="col-lg-6 col-md-12  col-sm-12">
+                        <div class="welcome-video-area fadeInUp" data-wow-delay="0.5s">
+                            <!-- Welcome Thumbnail -->
+                            <div class="welcome-thumb">
+                                <img src="{{landingData.buyOrSellSection.welcomeThumbImage}}" alt="">
+                            </div>
+                            <!-- Video Icon -->
+                            <div class="video-icon">
+                                <a href="{{landingData.buyOrSellSection.video}}" class="btn dream-btn video-btn" id="videobtn"><i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="services-block-four mt-s" *ngFor="let item of landingData.buyOrSellSection.rightBlock">
+                            <div class="inner-box">
+                                <div class="icon-img-box">
+                                    <img src="{{item.image}}" alt="">
+                                </div>
+                                <h3><a href="#">{{item.title}}</a></h3>
+                                <div class="text">{{item.subtitle}}</div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </section>
+    
+    <div class="double-bg" *ngIf="landingData">
+    
+        <section class="features section-padding-100-0" style="padding-bottom:70px">
+    
+        <div class="section-heading text-center">
+            <h2 class="fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">Nifty Row for investors</h2>
+            <p class="fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"></p>
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4" *ngFor="let item of landingData.investorSection">
+                    <!-- Content -->
+                    <div class="service_single_content box-shadow text-center mb-100 fadeInUp" data-wow-delay="0.2s" style="background:rgb(255, 253, 255)" >
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img class="embed-video" src="{{item.image}}" alt="">
+                        </div>
+                        <h6>{{item.title}}</h6>
+                        <p>{{item.subtitle}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- ##### About Us Area Start ##### -->
+<!-- 
+        <section class="about-us-area section-padding-0-0 clearfix" id="about">
+            <div class="container">
+                <div class="row align-items-center">
+    
+                    <div class="col-12 col-lg-6">
+                        <div class="welcome-meter fadeInUp" data-wow-delay="0.7s">
+                            <img src="/assets/img/bg-img/david.jpeg" class="img-responsive center-block" alt="">
+    
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="who-we-contant mt-s">
+                            <h4 class="fadeInUp" data-wow-delay="0.3s">Music NFTs for an emerging genre and new generation of global performing artists.</h4>
+                            <p class="fadeInUp" data-wow-delay="0.4s">Under the Nigerian and African genre, Afrobeat Music has become mainstream around the world and are now a must play in European and American night clubs and radio channels.</p>
+                            <p class="fadeInUp" data-wow-delay="0.5s">Genres such as hiplife, jùjú music, highlife and naija beats, which were amalgamated under the 'afrobeats' umbrella now stream on several international streaming platforms like Spotify, iTunes, Amazon music, gbedu.live, Soundcloud and more.</p>
+                          <p class="fadeInUp" data-wow-delay="0.6s">Afrobeats collaborations are becoming a must have for global Hip-hop and RnB artists like Drake and WizKid, 2021 Grammy award winner Burna boy and Chris Martins, Chris Brown and Davido to mention a few.</p>
+                            <a class="btn dream-btn mt-30 fadeInUp" data-wow-delay="0.7s" href="/assets/pdf/NiftyRowDeck.pdf">Read More</a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+        <section class="about-us-area section-padding-100 clearfix">
+            <div class="container">
+                <div class="row align-items-center">
+    
+                    <div class="col-12 col-lg-6 ">
+                        <div class="who-we-contant">
+                            <h4 class="fadeInUp" data-wow-delay="0.3s">NFTs for the Nollywood movie industry.</h4>
+                            <p class="fadeInUp" data-wow-delay="0.4s">Nifty Row seeks to deliver a unique platform that will enable creators like animators and producers issue and auction NFTs gloabally.</p>
+                            <p class="fadeInUp" data-wow-delay="0.5s">The marketplace will leverage on the global success of Nollywood films which currently airs across Africa, the US, UK, Europe and other parts of the world.</p>
+                          <p class="fadeInUp" data-wow-delay="0.6s">Investors of motion picture rights can be rest assured of incomes as the movies air over multiple cable and satellite networks such as Sky TV, DSTV, Netflix, Iroko TV, Amazon prime etc.</p>
+                            <a class="btn dream-btn mt-30 fadeInUp" data-wow-delay="0.7s" href="pdf/NiftyRowDeck.pdf">Read More</a>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-lg-6">
+                        <div class="welcome-meter fadeInUp" data-wow-delay="0.7s">
+                            <img src="/assets/img/core-img/about12.png" class="center-block" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </div>
+
+
+    <div class="clearfix"></div>
+
+    <!-- ##### Our Services Area Start ##### -->
+    <section class="our_services_area section-padding-100-0 clearfix" id="services" *ngIf="landingData">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <h2 class="fadeInUp" data-wow-delay="0.3s">Our Core Services</h2>
+                <p class="fadeInUp" data-wow-delay="0.4s"></p>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4" *ngFor="let item of landingData.servicesSection">
+                    <!-- Content -->
+                    <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.2s" >
+                        <!-- Icon -->
+                        <div class="service_icon">
+                            <img src="{{item.image}}" alt="">
+                        </div>
+                        <h6>{{item.title}}</h6>
+                        <p>{{item.subtitle}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Our Services Area End ##### -->
+
+    <!-- ##### Our roadmap Area start ##### -->
+    <section class="roadmap section-padding-100" style="background: url(img/bg-img/bread-bg.png) no-repeat center top;background-size: cover;" id="roadmap">
+        <div class="section-heading text-center">
+            <h2 class="fadeInUp" data-wow-delay="0.3s">Our Roadmap</h2>
+            <!--<p class="fadeInUp" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>-->
+        </div>
+        <div class="container-fluid">
+            <div class="row" id="mobileRow">
+                <div class="section_5-content">
+                    <div class="section_5-slider-trumb"></div>
+                    <div id="section_5-slider-circle">
+                        <div style="left:30%" class="data_cir cir_0" data-date="Q1 2021">
+                            <div class="data_cir-content">
+                                <div><div class="roadmap_content_info"><ul><li><span>Quarter 1, 2021</span></li>
+                                    <li><span>Technology Evaluation</span></li>
+                                    <li><span>Product Design </span></li>
+                                    <li><span>Partnerships sign-ups</span></li>
+                                    <li><span>Quarter 1, 2021</span></li>
+                                </ul>
+                                </div><span class="roadmap_img"><img src="/assets/img/roadmap-icons/1.svg" alt=""></span></div>
+                            </div>
+                        </div>
+                        <div style="left:40%" class="data_cir cir_2" data-date="Q2 2021">
+                            <div class="data_cir-content">
+                                <div><div class="roadmap_content_info"><ul><li><span>Quarter 2, 2021</span></li>
+                                <li><span>Product Development</span></li>
+                                <li><span>Ethereum and BSC blockchain integration</span></li>
+                                <li><span>Partnerships sign-ups</span></li>
+                                <li><span>Quality Assurance</span></li>
+
+                                </ul>
+                                </div><span class="roadmap_img"><img src="/assets/img/roadmap-icons/3.svg" alt=""></span></div>
+                            </div>
+                        </div>
+                        <div style="left:50%" class="data_cir cir_3" data-date="Q3 2021">
+                            <div class="data_cir-content">
+                                <div><div class="roadmap_content_info"><ul><li><span>Quarter 3, 2021</span></li>
+                                <li><span>Wallet Integration</span></li>
+                                <li><span>Testnet Go-Live</span></li>
+                                <li><span>Marketing Plan</span></li>
+                                <li><span>Partnerships sign-ups</span></li>
+
+                                </ul>
+                                </div><span class="roadmap_img"><img src="/assets/img/roadmap-icons/4.svg" alt=""></span></div>
+                            </div>
+                        </div>
+                        <div style="left:60%" class="data_cir cir_4 red_crc" data-date="Q4 2021">
+                            <div class="data_cir-content">
+                                <div><div class="roadmap_content_info"><ul><li><span>Quarter 4, 2021</span></li>
+                                <li><span>Marketing campaign</span></li>
+                                <li><span>Pre-sale</span></li>
+                                <li><span>Public-sale</span></li>
+                                <li><span>Mainnet Launch</span></li>
+
+                                </ul>
+                                </div><span class="roadmap_img"><img src="/assets/img/roadmap-icons/5.svg" alt=""></span></div>
+                            </div>
+                        </div>
+                        <div style="left:70%" class="data_cir cir_5 next" data-date="Q5 2022">
+                            <div class="data_cir-content">
+                                <div><div class="roadmap_content_info"><ul><li><span>Quarter 1, 2022</span></li>
+                                <li><span>Mobile App and DeFi Development</span></li>
+                                <li><span>DeFi Development</span></li>
+                                <li><span>DeFi Mainnet Launch</span></li>
+                                <li><span>DEX Listing</span></li>
+                                </ul>
+                                </div><span class="roadmap_img"><img src="/assets/img/roadmap-icons/6.svg" alt=""></span></div>
+                            </div>
+                        </div>
+                        <!--<div style="left:70%" class="data_cir cir_6 next" data-date="Q4 2021">
+                            <div class="data_cir-content">
+                                <div><div class="roadmap_content_info"><ul><li><span>DeFi Services Alpha</span></li>
+                                <li><span>Testnet integration for DeFi Services</span></li>
+                                <li><span>New partnerships and new marketplace support</span></li>
+                                <li><span>December 2021</span></li>
+                                </ul>
+                                </div><span class="roadmap_img"><img src="img/roadmap-icons/7.svg" alt=""></span></div>
+                            </div>
+                        </div>
+                        <div style="left:80%" class="data_cir cir_7 next" data-date="Q1 2022">
+                            <div class="data_cir-content">
+                                <div><div class="roadmap_content_info"><ul><li><span>DeFi Mainnet launch</span></li>
+                                  <li><span>Wallet/App upgrade with DeFi Services support</span></li>
+                                <li><span>Mainnet integration for DeFi Services</span></li>
+                                <li><span>January - March 2022 </span></li>
+                                </ul>
+                                </div><span class="roadmap_img"><img src="img/roadmap-icons/8.svg" alt=""></span></div>
+                            </div>
+                        </div>
+                        <div style="left:90%" class="data_cir cir_8 next" data-date="Q2 2022">
+                            <div class="data_cir-content">
+                                <div><div class="roadmap_content_info"><ul><li><span> DeFi Platform integration to Third-party marketplaces</span></li>
+                                <li><span>Partnership sign-ups with Finance and Insurance organizations</span></li>
+                                </ul>
+                                </div><span class="roadmap_img"><img src="img/roadmap-icons/9.svg" alt=""></span></div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+    <!-- ##### Our roadmap Area End ##### -->
+
+         <!--=======================================
+            Popular Collection Start Here
+    ========================================-->
+
+    <div class="popular-collection section-padding-100" id="blog" *ngIf="landingData">
+        <div class="container-fluid">
+            <div class="popular-collection-inr">
+                <div class="wrapper">
+                    <h3 class="heading heading-h2" style="text-align: center;">From Our Blog </h3>
+                </div>
+                <p-carousel [value]="landingData.blogSection" [numVisible]="1" [numScroll]="1"  [showIndicators]="true">
+                    <ng-template let-item pTemplate="item">
+                        <div class="row-custom owl-carousel owl-theme" id="popular-artwork">
+                            <div class="col-otr">
+                                <div class="col-inr">
+                                    <a  class="img-otr">
+                                        <img class="img-fluid img-artwork" src="{{item.image}}" alt="artwork-img">
+                                    </a>
+                                    <div class="content">
+                                        
+                                        <h3 class="head heading-h3">{{item.title}}</h3>
+                                        <a  class="by-otr body-sb"> <span class="by body-s">by</span> {{item.author}}</a>
+                                        <p class="fadeInUp" data-wow-delay="0.4s">{{item.body}}</p>
+                                        <a class="btn dream-btn mt-30 fadeInUp" data-wow-delay="0.7s" href="#">Read More</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </p-carousel>
+                
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- ##### Token counter Start ##### -->
+    <div class="faq-timeline-area section-padding-100" style="background:#fff;padding-bottom:70px" *ngIf="landingData">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12 col-md-12">
+                    <div class="section-heading">
+                        <h2 class="fadeInUp" data-wow-delay="0.3s" style="text-align: center;">Download Deck</h2>
+                        <!--<p class="fadeInUp" data-wow-delay="0.4s" style="margin-left:0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.</p>-->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+
+		                <div class="col-md-6">
+		                  <a href="{{landingData.deckSection.decklink}}">
+		                      <div class="article box-shadow">
+		                        <i class="ui-content-download article__icon">
+		                            <img src="/assets/img/flags/uk.png" class="flag-img" alt="">
+		                        </i>
+		                        <h3 class="article__title">Deck</h3>
+		                      </div>
+		                    </a>
+		                </div>
+                        <div class="col-md-3">
+                        </div>
+
+		            </div>
+                </div>
+
+               
+
+            </div>
+        </div>
+    </div>
+    <!-- ##### Token counter Area End ##### -->
+
+    <div class="faq-timeline-area section-padding-100" style="background:#fff;padding-bottom:70px">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12 col-md-12">
+                    <div class="section-heading">
+                        <h2 class="fadeInUp" data-wow-delay="0.3s" style="text-align: center;">Token Management Information</h2>
+                        <p class="fadeInUp" data-wow-delay="0.4s" style="text-align: center;">Nifty Row Token (NRT) will be managed by a Decentralized Autonomous Organization (DAO) that will operate through on-chain governance which will provide ongoing support for the creative community. </p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+
+		                <div class="col-md-6">
+                            The NRT will enable:
+                            
+                            <ul class="square">
+                                <li>
+                                    Early access to presales
+                                </li>
+                                <li>
+                                    Authorized Collections
+                                </li>
+                                <li>
+                                    Voting on proposals
+                                </li>
+                                <li>
+                                    Customized rarity 
+                                </li>
+                                <li>
+                                    Guaranteed royalties
+                                </li>
+                                <li>
+                                    NFT Lots
+                                </li>
+                                <li>
+                                    Discounted Fees
+                                </li>
+                                <li>
+                                    Exclusive Access to Mint 
+                                </li>
+                                <li>
+                                    Funding of Creative Initiatives and Projects
+                                </li>
+
+                            </ul>
+		                </div>
+                        <div class="col-md-3">
+                        </div>
+
+		            </div>
+                </div>
+
+               
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### token-distribution Area start ##### -->
+    <figure id="pie"></figure>
+  
+    <section class="token-distribution section-padding-100" *ngIf="landingData">
+        <div class="container">
+
+            <div class="section-heading text-center">
+                <!-- Dream Dots -->
+                <!-- <div class="dream-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
+                    <img src="img/svg/section-icon-4.svg" alt="">
+                </div> -->
+                <h2 class="fadeInUp" data-wow-delay="0.3s">{{landingData.tokenSection.title}}</h2>
+                <p class="fadeInUp" data-wow-delay="0.4s">{{landingData.tokenSection.subtitle}}</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div echarts [options]="tokenAllocation"></div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div echarts [options]="useOfSales" ></div>
+            </div>
+           
+        </div>
+
+    </section>
+    <!-- ##### token-distribution Area End ##### -->
+
+    <footer class="footer-area bg-img" style="background-image: url(/assets/img/core-img/pattern.png);">
+
+
+        <!-- ##### Contact Area Start ##### -->
+        <div class="contact_us_area section-padding-100-0" id="contact">
+    <div class="contact-main" id="contact">
+        <div class="container-fluid">
+            <div class="wrapper">
+                <h2 class="heading heading-h2" style="text-align: center;">Get in Touch</h2>
+            </div>
+            <div class="row row-contact">
+                <div class="col-lg-1 col-contact-box"></div>
+                <div class="col-lg-5 col-contact-box">
+                    <div class="contact-box-inr">
+                        <img class="circle-img" src="/assets/img/contact-circle.svg" alt="img">
+                        <div class="box-address">
+                            <h3 class="head heading-h3">We’d Love to Hear from You!</h3>
+                            <p class="desc body-m">Reach out to us through any of our contact channels or visit our office.</p>
+                          
+                            <div class="icon-main">
+                                <div class="icon-otr-2">
+                                    <div class="icon-inr">
+                                        <div class="icon-inrr">
+                                            <span class="circle"></span>
+                                            <svg class="icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 11.701a7.908 7.908 0 003.66 3.645.742.742 0 00.735-.056l2.347-1.565a.75.75 0 01.711-.065l4.391 1.882a.748.748 0 01.45.778 4.501 4.501 0 01-4.464 3.93A12.75 12.75 0 013.75 7.5a4.5 4.5 0 013.93-4.464.747.747 0 01.778.45l1.884 4.394a.751.751 0 01-.062.706L8.72 10.97a.743.743 0 00-.05.731v0z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </div>
+                                        <h4 class="head-icon heading-h4">Phone</h4>
+                                    </div>
+                                    <p class="text body-m">+234 802-594-3549</p>
+                                </div>
+                                <div class="icon-otr-2 icon-otr-3">
+                                    <div class="icon-inr">
+                                        <div class="icon-inrr">
+                                            <span class="circle"></span>
+                                            <svg class="icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.25h18V18a.75.75 0 01-.75.75H3.75A.75.75 0 013 18V5.25z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 5.25l-9 8.25-9-8.25" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </div>
+                                        <h4 class="head-icon heading-h4">Email</h4>
+                                    </div>
+                                    <p class="text body-m">support@niftyrow.io</p>
+                                </div>
+                            </div>
+                            <div class="social-icon-otr">
+                                <h4 class="head-2 heading-h4">Follow Nifty Row on Social Media</h4>
+                                <ul class="icon-ul">
+                                    <li class="icon-li">
+                                        <a href="" class="icon-a">
+                                            <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                    <li class="icon-li">
+                                        <a href="" class="icon-a">
+                                            <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                    <li class="icon-li">
+                                        <a href="" class="icon-a">
+                                            <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM20 19.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="#999"/><path d="M9.3 10A21.917 21.917 0 0116 9a21.916 21.916 0 016.7 1M22.7 22a21.917 21.917 0 01-6.7 1 21.917 21.917 0 01-6.7-1" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.38 22.761l1.504 3.006a.996.996 0 001.123.526c3.068-.75 5.712-2.057 7.638-3.73a1.007 1.007 0 00.31-1.05L25.706 7.358a1.002 1.002 0 00-.578-.639c-1.2-.491-2.44-.875-3.708-1.148a1.002 1.002 0 00-1.165.66l-.997 2.99M12.62 22.76l-1.504 3.007a.997.997 0 01-1.124.526c-3.067-.75-5.711-2.057-7.637-3.73a1.007 1.007 0 01-.309-1.05L6.293 7.358a1.003 1.003 0 01.578-.64c1.2-.49 2.44-.874 3.708-1.147a1.002 1.002 0 011.165.66l.997 2.99" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                    <li class="icon-li">
+                                        <a href="" class="icon-a">
+                                            <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 11l-4 17M7.693 19.57A10 10 0 1126 14c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                    <li class="icon-li">
+                                        <a href="" class="icon-a">
+                                            <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 16l-6-4v8l6-4z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16c0 3.72.384 5.902.676 7.023a1.99 1.99 0 001.204 1.362C9.065 25.993 16 25.95 16 25.95s6.935.044 11.12-1.564a1.99 1.99 0 001.204-1.362C28.616 21.902 29 19.72 29 16c0-3.72-.384-5.902-.676-7.023a1.99 1.99 0 00-1.205-1.362C22.935 6.007 16 6.05 16 6.05S9.065 6.007 4.88 7.615a1.99 1.99 0 00-1.204 1.362C3.384 10.098 3 12.28 3 16z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                    <li class="icon-li">
+                                        <a href="" class="icon-a">
+                                            <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-message-otr">
+                    <div class="col-message-inr">
+                        <h3 class="head heading-h3">Pre-sale Whitelist Form</h3>
+                        <p class="desc body-m">Please fill out the form with a copy of a link to your Nifty Row social media engagement on Twitter.</p>
+                        <form class="form-main" method="post" #contactForm="ngForm">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-otr" data-wow-delay="0.2s">
+                                        <input class="input" type="text" name="firstName" id="firstName" [(ngModel)]="firstName" placeholder="Your First Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-otr" data-wow-delay="0.2s">
+                                        <input class="input" type="text" name="lastName" id="lastName" [(ngModel)]="lastName" placeholder="Your Last Name" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="input-otr">
+                                        <input class="input" type="number" name="amount" id="amount" [(ngModel)]="amount" placeholder="ETH ICO Participation Amount" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="input-otr" data-wow-delay="0.3s">
+                                        <input class="input" type="email" name="email" [(ngModel)]="email" placeholder="Your Email Address" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-otr" data-wow-delay="0.2s">
+                                        <input class="input" type="text" name="tweetLink" [(ngModel)]="tweetLink" id="linkToTweet" placeholder="Twitter Link" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-otr">
+                                        <input class="input" type="text" name="linkedInUrl" [(ngModel)]="linkedInUrl" id="linkedInUrl" placeholder="LinkedIn Url" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-otr">
+                                <input class="input" type="text" [(ngModel)]="country" name="country" id="country" placeholder="Country of Origin" required>
+                            </div>
+                            <div class="input-otr">
+                                <textarea class="input" name="walletAddress" [(ngModel)]="walletAddress" id="walletAddress" placeholder="ERC-20 Wallet Address" required></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label style="font-style: italic; font-size: small;">
+                                        The NRT token is not and will not be offered or sold, directly or indirectly, to any person who is a resident, organised, or located in any country or territory subject to OFAC comprehensive sanctions programs from time to time, including Cuba, Crimea region of Ukraine, Democratic People’s Republic of Korea, Iran, Syria, any person found on the OFAC specially designated nationals, blocked person list, any other consolidated prohibited person list as determined by any applicable governmental authority.
+                                    </label>
+                                  </div>
+                            </div>
+                            <div style="margin-top: 10px;" class="col-12 text-center fadeInUp" data-wow-delay="0.6s">
+                                <button type="submit" class="btn dream-btn" (click)="sendData(contactForm)">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--=======================================
+          Contact End Here
+========================================-->
+            
+                 
+        </div>
+        <!-- ##### Contact Area End ##### -->
+
+
+        <section class="home-newsletter">
+            <div class="container">
+            <div class="row">
+            <div class="col-sm-12" id="mc_embed_signup">
+                <form action="https://gmail.us6.list-manage.com/subscribe/post?u=8dfd1d931f2b0f3e33e53978a&amp;id=22882c8fde" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div class="single" id="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL"><h2>Subscribe to Nifty Row</h2></label>
+                        <div class="input-group">
+                   
+                            <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter your email" required>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8dfd1d931f2b0f3e33e53978a_22882c8fde" tabindex="-1" value=""></div>
+                            <span class="input-group-btn">
+                            <button name="subscribe" id="mc-embedded-subscribe" class="btn btn-theme" type="submit">Subscribe</button>
+                            </span>
+                   
+                     
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+            </div>
+        </section>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+
+
+
+
+    
+</body>

@@ -1,0 +1,116 @@
+<!-- {{trans.language}}: {{config.defaultLanguage}} -->
+
+    <!--=======================================
+                Modal Start Here
+    ========================================-->
+
+    <!-- <div class="navi">
+        <input type="checkbox" id="navi-check">
+        <div class="navi-header">
+
+        </div>
+        <div class="navi-btn">
+          <label for="navi-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="navi-links">
+          <a href="//github.io/jo_geek" target="_blank">Github</a>
+          <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
+          <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
+          <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
+          <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
+        </div>
+      </div> -->
+
+<!--=======================================
+            Modal End Here
+========================================-->
+
+    
+    <!--=======================================
+                Navbar Start Here
+    ========================================-->
+
+    <div class="navbar-main">
+      <div class="container-fluid">
+          <div class="navbar-inr">
+              <div class="logo-otr">
+                  <a href="./" class="logo-inr">
+                      <img  class="logo" src="{{this.headerData.logoPath}}" alt="Nifty Row">
+                  </a>
+                  
+              </div>
+              <div class="head-otr" >
+                <h1 id="logoText" class="heading-h1 heading titleGreathorned">
+                Nifty Row [Demo]
+                </h1>
+            </div>
+              <app-search></app-search>
+              <div class="navigation-otr">
+                  <ul class="navigation-inr">
+                      <li class="nav-li" *ngFor="let link of headerData.menuGroup ">
+                          <a routerLink= "{{link.path}}" class="nav-a body-sb">{{link.title}} </a>
+                          <ul class="dropdown-otr" *ngIf="link.menu.length > 0">
+                              <li class="dropdown-li" *ngFor="let item of link.menu ">
+                                  <a routerLink="{{item.url}}" class="dropdown-a body-sb">{{item.title}}</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="action-otr">
+                <p-overlayPanel #op>
+                
+                        <div class="connect-wallet">
+                            <div class="container">
+                                <div class="col-lg-8 col-head-otr">
+                                    <h2 style="font-size: 26px; line-height: 17px;" class="connect-heading heading-h2">Connect Wallet</h2>
+                                </div>
+                                <span class="line"></span>
+                                <div class="col-lg-8 col-connect-otr">
+                                    <div class="col-connect-inr">
+                                        <p class="desc body-m"> 
+                                            You can connect your wallet with one of the following wallet providers.
+                                        </p>
+                                        <div class="row row-boxes">
+                                          
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-box-otr" (click)="connectToMetamask()">
+                                                <a class="box-inr box-2" style="height: 9rem;
+                                                width: 10rem;" >
+                                                    <div class="icon-otr">
+                                                        <img class="icon" style="width: 60px; height: 60px; margin-left: 76%;" src="../assets/img/metamask.jpeg" alt="icon">
+                                                    </div>
+                                                    <h5 class="head heading-h5">MetaMask</h5>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+              
+                </p-overlayPanel>
+                
+                  <a routerLink= "/{{buttonsData.create.path}}" class="btn-fill btn-create">{{buttonsData.create.title}}</a>
+                  <a *ngIf="account === undefined" (click)="op.toggle($event)" class="btn-outline1 btn-wallet">{{buttonsData.wallet.title}}</a>
+                  <a *ngIf="account !== undefined" (click)="op.toggle($event)" class="btn-outline1 btn-wallet"> {{account.substring(0, 5) + 'xxxxx' + account.slice(account.length - 5)}} </a>
+              </div>
+              <div class="burger-menu">
+                  <div class="burger-icon-otr">
+                      <svg class="burger-icon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.75 12h16.5M4 6h9M11 18h9" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<!--=======================================
+          Navbar End Here
+========================================-->
+
+

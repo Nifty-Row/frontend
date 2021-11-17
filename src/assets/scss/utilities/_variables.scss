@@ -1,0 +1,69 @@
+
+/*---------------------------------
+      Variable Light Mode
+---------------------------------*/
+
+$Primary-Color-Home-1: #366CE3;
+$Secondary-Color-Home-1: #D0FC00;
+$Gray-Shade-1: #666666;
+$Gray-Shade-2: #999999;
+$Gray-Shade-3: #CFCFCF;
+$Gray-Shade-4: #F2F2F2;
+$Black-Color: #000000;
+$White-Color: #FFFFFF;
+
+/*---------------------------------
+      Variable Dark Mode
+---------------------------------*/
+
+$Dark-Primary-Color-Home-1: #366CE3;
+$Dark-Secondary-Color-Home-1: #D0FC00;
+$Dark-Gray-Shade-1: #CFCFCF;
+$Dark-Gray-Shade-2: #999999;
+$Dark-bg-Secondry: rgba(255, 255, 255, 0.1);
+$Dark-bg-tertiary: rgba(255, 255, 255, 0.15);
+$Dark-bg-quaternary: rgba(255, 255, 255, 0.05);
+$Dark-Black-Color: #101010;
+$Dark-Black-2-Color: #272727;
+
+/*---------------------------------
+        Font Size's
+---------------------------------*/
+
+$font-size-h1: 56px;
+$font-size-h2: 44px;
+$font-size-h3: 32px;
+$font-size-h4: 24px;
+$font-size-h5: 20px;
+$font-size-lb: 20px;
+$font-size-bm: 18px;
+$font-size-bs: 16px;
+$font-size-xsb: 14px;
+
+/*---------------------------------
+        Line Height's
+---------------------------------*/
+
+$line-height-h1: 80px;
+$line-height-h2: 60px;
+$line-height-h3: 48px;
+$line-height-h4: 40px;
+$line-height-h5: 36px;
+$line-height-lb: 34px;
+$line-height-bm: 34px;
+$line-height-bsb: 32px;
+$line-height-bs: 32px;
+$line-height-xsb: 28px;
+
+/*---------------------------------
+        Font Family's
+---------------------------------*/
+
+$font-family-DMSans-Regular: 'DMSans-Regular';
+$font-family-DMSans-Bold: 'DMSans-Bold';
+
+/*---------------------------------
+        Box Shadow
+---------------------------------*/
+
+$box-shadow-custom: 0px 20px 50px rgba(0, 0, 0, 0.1);

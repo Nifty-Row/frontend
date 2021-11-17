@@ -1,0 +1,102 @@
+{
+    "userId": 1,
+    "username": "Meini D Creative",
+    "walletAddress": "0xd07dc42622430",
+    "email": "maini2@gmail.com",
+    "socials": {"twitterUrl": "www.twitter.com/xendbit", "facebookUrl": "www.facebook.com/xendbit",
+    "youtubeUrl": "www.youtube.com/xendbit", "telegramUrl": "www.telegram.com/xendbit"},
+    "followers": [{
+      "walletAddress": "0xd07dc4262...2430", 
+      "username": "odeny", 
+      "displayImage": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8"
+    }],
+    "following": [{
+      "walletAddress": "0xd07dc4262...2430", 
+      "username": "odeny", 
+      "displayImage": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8"
+    }],
+    "likes": [{"tokenId": "710246", "type": "Auction"}],
+    "createdArtworks": [{
+      "id": "reno",
+      "category": "artwork",
+      "tags": ["art", "away"],
+      "owner": {
+          "id": "OGW",
+          "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+          "username": "Ndo"
+      },
+      "creator": {
+          "id": "Rew",
+          "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+          "username": "Ndo",
+          "collections": [],
+          "type": "Creator"
+      },
+      "featuredImage": {
+          "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+          "mediaType": 0
+      },
+      "isBidding": true,
+      "gallery": [{
+          "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+          "mediaType": 0
+      }],
+      "description": "Description",
+      "price": 23,
+      "currency": "ETH",
+      "dateIssued": "2021-11-11T14:01:08.000Z",
+      "lastAuctionId": 155870,
+      "likes": 34,
+      "sold": false,
+      "name": "Beautyful",
+      "tokenId": 939141,
+      "symbol": "Mine",
+      "type": "Artwork"
+  }],
+  "collections": [{
+    "id": "reno",
+    "category": "artwork",
+    "tags": ["art", "away"],
+    "owner": {
+        "id": "OGW",
+        "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+        "username": "Ndo"
+    },
+    "creator": {
+        "id": "Rew",
+        "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+        "username": "Ndo",
+        "collections": [],
+        "type": "Creator"
+    },
+    "featuredImage": {
+        "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+        "mediaType": 0
+    },
+    "isBidding": true,
+    "gallery": [{
+        "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+        "mediaType": 0
+    }],
+    "description": "Description",
+    "price": 23,
+    "currency": "ETH",
+    "dateIssued": "2021-11-11T14:01:08.000Z",
+    "lastAuctionId": 155870,
+    "likes": 34,
+    "sold": false,
+    "name": "Beautyful",
+    "tokenId": 939141,
+    "symbol": "Mine",
+    "type": "Artwork"
+  }],
+  "bids": [{"tokenId": "710246", "bid": 0.2, "auctionId": 121266}],
+  "isActive": true,
+  "aboutInfo": "I am a creative with an eye for contemporary african art, particularly focused on curating indigenous, digital, African art pointing to Africa's rich heritage.",
+  "displayImage": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+  "coverImage": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+  "webUrl": {"ur": "www.telegram.com/xendbit", "title": "telegram"},
+  "assetTotalValue": 0,
+  "joinDate": "2021-11-11T14:01:08.000Z",
+  "type": "User"
+  }

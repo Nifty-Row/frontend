@@ -1,114 +1,91 @@
-import { AllUsersComponent } from './all-users/all-users.component';
-import { AdminSettingsComponent } from './admin-settings/admin-settings.component';
-import { AboutComponent } from './about/about.component';
-import { ViewAssetComponent } from './view-asset/view-asset.component';
-import { RequestPasswordComponent } from './request-password/request-password.component';
-import { IssuerDashboardComponent } from './issuer-dashboard/issuer-dashboard.component';
-import { IssuerComponent } from './issuer/issuer.component';
-import { IssueAssetsComponent } from './issue-assets/issue-assets.component';
-import { ApproveAssetsComponent } from './approve-assets/approve-assets.component';
-import { RegisterComponent } from './register/register.component';
-import { ChangePasswordComponent } from './change-password/change-password.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { CommonModule } from '@angular/common';
+import { AssetDetailsComponent } from './pages/asset-details/asset-details.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AdminAssetsComponent } from './admin-assets/admin-assets.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { AdminComponent } from './admin/admin.component';
-import { SecondaryViewComponent } from './secondary-view/secondary-view.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
-import { AllAssetsComponent } from './all-assets/all-assets.component';
-import { AdminViewComponent } from './admin-view/admin-view.component';
-import { MyOrdersComponent } from './my-orders/my-orders.component';
-import { PortfolioComponent } from './my-portfolio/portfolio.component';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 
+import { AppController } from './app.controller';
+import { HomeComponent } from './core/components/home/home.component';
+import { ConnectWalletComponent } from './pages/connect-wallet/connect-wallet.component';
+import { routerConfig } from './core/config/router-config.const';
+import { AuthenticationComponent } from './pages/authentication/authentication.component';
+import { AboutComponent } from './pages/about/about.component';
+import { AssetsComponent } from './pages/assets/assets.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
+import { CreatorsComponent } from './pages/creators/creators.component';
+import { MyAssetsComponent } from './pages/my-assets/my-assets.component';
+import { MintComponent } from './pages/mint/mint.component';
+import { FAQComponent } from './pages/faq/faq.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
-const routes: Routes =[
+const routes: Routes = [
+  {
+    path: 'demo',
+    component: HomeComponent,
+    data: {
+      title: AppController.trans().home
+    }
+  },
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  }, 
-  {
-    path: 'login',
-    component: LoginComponent
+    component: LandingComponent,
+    data: { showHeader: false }
   },
-  { path: 'add-admin',  component: AdminComponent },
   {
-    path: 'register',
-    component: RegisterComponent
+    path: 'connect-wallet',
+    component: ConnectWalletComponent
+  },
+  {
+    path: 'authentication',
+    component: AuthenticationComponent
   },
   {
     path: 'about',
     component: AboutComponent
   },
   {
-    path: 'change-password',
-    component: ChangePasswordComponent
-  },
-  { 
-    path: 'admin-assets',
-    component: AdminAssetsComponent
+    path: 'assets',
+    component: AssetsComponent
   },
   {
-    path: 'approve',
-    component: ApproveAssetsComponent,
+    path: 'contact',
+    component: ContactComponent
   },
   {
-    path: 'admin-dashboard',
-    component: AdminDashboardComponent
+    path: 'profile',
+    component: UserDashboardComponent
   },
   {
-    path: 'add-issuer',
-    component: IssuerComponent
-  },
-  { path: 'view-users',       
-  component: AllUsersComponent 
+    path: 'creators',
+    component: CreatorsComponent
   },
   {
-    path: 'issuer-dashboard',
-    component: IssuerDashboardComponent
+    path: 'details/:asset/:auction',
+    component: AssetDetailsComponent
   },
-  { path: 'issue',       
-    component: IssueAssetsComponent 
+  // {
+  //   path: 'my-assets',
+  //   component: MyAssetsComponent
+  // },
+  {
+    path: 'mint',
+    component: MintComponent
   },
   {
-    path: 'request-password',
-    component: RequestPasswordComponent
+    path: 'faq',
+    component: FAQComponent
   },
   {
-    path: 'view-sec',
-    component: SecondaryViewComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  { path: 'admin-settings',     component: AdminSettingsComponent },
-  {
-    path: 'viewAsset',
-    component: ViewAssetComponent
-  },
-  // { path: 'dashboard',      component: DashboardComponent },
-  { path: 'user-dashboard',   component: UserDashboardComponent },
-  { path: 'assets',     component: AllAssetsComponent },
-  { path: 'admin-view',     component: AdminViewComponent },
-  { path: 'orders',           component: MyOrdersComponent },
- 
-  { path: 'issuer', component: IssuerComponent },
-  { path: 'myAssets',  component: PortfolioComponent }
+    path: routerConfig.users.base,
+    loadChildren: () => import('./lazy/users/users.module').then(mod => mod.UsersModule)
+  }
 ];
-
-
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'enabled',
+};
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule,
-    RouterModule.forRoot(routes)
-  ],
-  exports: []
+  
+  imports: [RouterModule.forRoot(routes, routerOptions)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

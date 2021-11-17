@@ -1,0 +1,231 @@
+@import 'src/assets/scss/utilities/screens';
+@import 'src/assets/scss/utilities/mixins';
+@import 'src/assets/scss/utilities/variables';
+@import 'src/assets/scss/utilities/settings';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.login-main{
+    background-image: url(/assets/img/login-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .container-fluid{
+        .log-in{
+            padding: 32px 0 24px 0;
+            .nav-bar{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .row-login{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 50px 0;
+                .col-login-otr{
+                    padding: 0;
+                    .col-login-inr{
+                        position: relative;
+                        margin: 0 70px;
+                        padding: 44px 48px 52px 48px;
+                        background-color: rgba(255, 255, 255, 0.75);
+                        border-radius: 24px;
+                        @include breakpoint($secreen-max-lg){
+                            margin: 0;
+                        }
+                        @include breakpoint($secreen-xs){
+                            padding: 24px 28px 28px 28px;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 75%;
+                            border-radius: 24px;
+                            top: 0;
+                            left: 0;
+                            backdrop-filter: blur( 4.0px );
+                            -webkit-backdrop-filter: blur( 4.0px );
+                        }
+                        .content{
+                            position: relative;
+                            z-index: 2;
+                            .head{
+                                text-align: center;
+                                color: $Black-Color;
+                            }
+                            .login-social{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin: 24px 0;
+                                .line{
+                                    flex: 1;
+                                    background-color: $Gray-Shade-3;
+                                    height: 1px;
+                                }
+                                .desc{
+                                    color: $Gray-Shade-1;
+                                    padding: 0 12px;
+                                }
+                            }
+                            .btn-main{
+                                display: flex;
+                                align-items: center;
+                                @include breakpoint($secreen-xxs){
+                                    flex-direction: column;
+                                }
+                                .btn-otr{
+                                    width: 50%;
+                                    @include breakpoint($secreen-xxs){
+                                        width: 100%;
+                                    }
+                                    &:not(:last-child){
+                                        margin: 0 30px 0 0;
+                                        @include breakpoint($secreen-xxs){
+                                            margin: 0 0 30px 0;
+                                        }
+                                    }
+                                    .btn{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: 1px solid $Primary-Color-Home-1;
+                                        border-radius: 16px;
+                                        padding: 10px 0;
+                                        transition: .3s;
+                                        &:hover{
+                                            background-color: $Primary-Color-Home-1;
+                                            color: $White-Color;
+                                            .icon{
+                                                transition: .3s;
+                                                path{
+                                                    transition: .3s;
+                                                    stroke: $White-Color;
+                                                }
+                                            }
+                                        }
+                                        &:focus{
+                                            outline: none;
+                                            box-shadow: none !important;
+                                        }
+                                        .icon{
+                                            margin: 0 12px 0 0;
+                                            transition: .3s;
+                                            path{
+                                                transition: .3s;
+                                                stroke: $Primary-Color-Home-1;
+                                            }
+                                        }
+                                        .text{
+                                            transition: .1s;
+                                        }
+                                    }
+                                }
+                            }
+                            .form-main{
+                                .input-otr{
+                                    margin: 0 0 30px 0;
+                                    .input{
+                                        width: 100%;
+                                        background-color: $White-Color;
+                                    }
+                                }
+                                .input-otr-2{
+                                    margin: 0;
+                                }
+                                .check-main{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    margin: 24px 0;
+                                    @include breakpoint($secreen-xxs){
+                                        flex-direction: column;
+                                    }
+                                    .check{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        @include breakpoint($secreen-xxs){
+                                            margin: 0 0 16px 0;
+                                        }
+                                        label{
+                                            display: flex;
+                                            align-items: center;
+                                            margin: 0;
+                                            .check-inner{
+                                                width: 24px;
+                                                height: 24px;
+                                                border-radius: 50%;
+                                                flex-shrink: 0;
+                                                margin-right: 12px;
+                                                background-color: $White-Color;
+                                                position: relative;
+                                                &:hover{
+                                                    cursor: pointer;
+                                                }
+                                                .input-check{
+                                                    opacity: 0;
+                                                    position: absolute;
+                                                    &:hover{
+                                                        cursor: pointer;
+                                                    }
+                                                }
+                                                .input-check:checked + .fill-current {
+                                                    display: block;
+                                                    width: 24px;
+                                                    height: 24px;
+                                                    position: absolute;
+                                                    left: 50%;
+                                                    top: 50%;
+                                                    transform: translate(-50%, -50%);
+                                                    border-radius: 50%;
+                                                }
+                                                .fill-current{
+                                                    display: none;
+                                                    width: 24px;
+                                                    height: 24px;
+                                                    pointer-events: none;
+                                                    position: relative;
+                                                    left: -1px;
+                                                    top: -1px;
+                                                }
+                                            }
+                                            .select-none{
+                                                color: #666666;
+                                                line-height: 28px;
+                                                .terms{
+                                                    display: inline;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .forget{
+                                        color: $Primary-Color-Home-1;
+                                    }
+                                }
+                                .action-otr{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .button{
+                                        width: 100%;
+                                        background-color: $Primary-Color-Home-1;
+                                        color: $White-Color;
+                                        border: none;
+                                        padding: 10px 0;
+                                        border-radius: 16px;
+                                        @include site-transition;
+                                        &:hover{
+                                            background-color: $Secondary-Color-Home-1;
+                                            color: $Black-Color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

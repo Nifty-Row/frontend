@@ -1,0 +1,304 @@
+@import 'src/assets/scss/utilities/screens';
+@import 'src/assets/scss/utilities/mixins';
+@import 'src/assets/scss/utilities/variables';
+@import 'src/assets/scss/utilities/settings';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+
+
+/*------------------------------------------
+          Contact Start Here
+-------------------------------------------*/
+
+.contact-main{
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .wrapper{
+            .heading{
+                color: $Black-Color;
+            }
+        }
+        .line{
+            display: flex;
+            flex: 1;
+            height: 1px;
+            background-color: $Gray-Shade-3;
+            margin: 36px 0 48px 0;
+        }
+        .row-contact{
+            align-items: center;
+            .col-contact-box{
+                .contact-box-inr{
+                    position: relative;
+                    background-color: $Gray-Shade-4;
+                    border-radius: 24px;
+                    padding: 72px 45px;
+                    overflow: hidden;
+                    @include breakpoint($secreen-xxs){
+                        padding: 45px 30px;
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 475px;
+                        height: 475px;
+                        background-color: #B9C7E5;
+                        border-radius: 100%;
+                        top: 127px;
+                        left: 70px;
+                        filter: blur(300px);
+                    }
+                    .circle-img{
+                        position: absolute;
+                        right: 0;
+                        top: 130px;
+                    }
+                    .box-address{
+                        position: relative;
+                        z-index: 2;
+                        .head{
+                            color: $Black-Color;
+                            margin: 0 0 16px 0;
+                        }
+                        .desc{
+                            color: $Gray-Shade-1;
+                        }
+                        .icon-otr{
+                            margin: 56px 0 36px 0;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin: 48px 0 36px 0;
+                            }
+                            .icon-inr{
+                                display: flex;
+                                align-items: center;
+                                margin: 0 0 12px 0;
+                                .icon-inrr{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin: 0 16px 0 0;
+                                    .circle{
+                                        background-color: $White-Color;
+                                        width: 52px;
+                                        height: 52px;
+                                        border-radius: 100%;
+                                    }
+                                    .icon{
+                                        position: absolute;
+                                        z-index: 2;
+                                    }
+                                }
+                                .head-icon{
+                                    color: $Black-Color;
+                                }
+                            }
+                        }
+                        .icon-main{
+                            display: flex;
+                            align-items: center;
+                            margin: 0 0 72px 0;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin: 0 0 48px 0;
+                            }
+                            .icon-otr-2{
+                                margin: 0 48px 0 0;
+                                @include breakpoint($secreen-xs){
+                                    margin: 0 0 36px 0;
+                                }
+                                .icon-inr{
+                                    display: flex;
+                                    align-items: center;
+                                    margin: 0 0 12px 0;
+                                    .icon-inrr{
+                                        position: relative;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin: 0 16px 0 0;
+                                        .circle{
+                                            background-color: $White-Color;
+                                            width: 52px;
+                                            height: 52px;
+                                            border-radius: 100%;
+                                        }
+                                        .icon{
+                                            position: absolute;
+                                            z-index: 2;
+                                        }
+                                    }
+                                    .head-icon{
+                                        color: $Black-Color;
+                                    }
+                                }
+                            }
+                            .icon-otr-3{
+                                margin: 0;
+                            }
+                        }
+                        .social-icon-otr{
+                            .head-2{
+                                color: $Black-Color;
+                            }
+                            .icon-ul{
+                                display: flex;
+                                align-items: center;
+                                flex-wrap: wrap;
+                                .icon-li{
+                                    margin: 20px 0 0 0;
+                                    &:not(:last-child){
+                                        margin-right: 16px;
+                                    }
+                                    .icon-a{
+                                        .icon{
+                                            &:hover{
+                                                path{
+                                                    stroke: $Primary-Color-Home-1;
+                                                }
+                                            }
+                                            path{
+                                                transition: .3s;
+                                                stroke: $Gray-Shade-2;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .col-message-otr{
+                .col-message-inr{
+                    padding: 0 0 0 66px;
+                    @include breakpoint($secreen-max-md){
+                        padding: 72px 0 0 0;
+                    }
+                    .head{
+                        color: $Black-Color;
+                    }
+                    .desc{
+                        color: $Gray-Shade-1;
+                        margin: 16px 0 40px 0;
+                    }
+                    .form-main{
+                        width: 50%;
+                        @include breakpoint($secreen-max-xxxl){
+                            width: 80%;
+                        }
+                        @include breakpoint($secreen-max-md){
+                            width: 100%;
+                        }
+                        .input-otr{
+                            margin: 0 0 30px 0;
+                            .input{
+                                width: 100%;
+                            }
+                        }
+                        .input-otr{
+                            margin: 0 0 24px 0;
+                            .textarea{
+                                padding: 16px 24px;
+                                height: 190px;
+                                appearance: none;
+                                resize: none;
+                            }
+                        }
+                        .input-otr{
+                            .select {
+                                cursor: pointer;
+                                display: inline-block;
+                                position: relative;
+                                width: 100%;
+                                .select-hidden {
+                                    display: none;
+                                    visibility: hidden;
+                                    padding-right: 10px;
+                                }
+                                .select-styled {
+                                    background-color: $Gray-Shade-4;
+                                    color: $Gray-Shade-2;
+                                    padding: 10px 24px;
+                                    border-radius: 16px;
+                                    font-size: $font-size-bs;
+                                    line-height: $line-height-bsb;
+                                    font-family: $font-family-DMSans-Bold;
+                                    &:after {
+                                        content:"";
+                                        width: 12px;
+                                        height: 10px;
+                                        position: absolute;
+                                        background-image: url(/assets/img/contact-page-arrow.svg);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        top: 21px;
+                                        right: 24px;
+                                    }
+                                    &:active, &.active {
+                                        &:after {
+                                            top: 21px;
+                                            border-color: transparent transparent $Gray-Shade-3 transparent;
+                                        }
+                                    }
+                                }
+                                .select-options {
+                                    display: none; 
+                                    position: absolute;
+                                    top: 130%;
+                                    width: 100%;
+                                    z-index: 999;
+                                    background-color: $Gray-Shade-4;
+                                    border-radius: 16px;
+                                    li {
+                                        font-size: $font-size-bs;
+                                        line-height: $line-height-bsb;
+                                        font-family: $font-family-DMSans-Bold;
+                                        color: $Gray-Shade-2;
+                                        margin: 0;
+                                        padding: 10px 24px;
+                                        border-radius: 16px;
+                                        transition: .3s;
+                                        &:hover {
+                                            color: $White-Color;
+                                            background: $Primary-Color-Home-1;
+                                        }
+                                        &[rel="hide"] {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .action-otr{
+                            display: flex;
+                            .button{
+                                background-color: $Primary-Color-Home-1;
+                                color: $White-Color;
+                                width: 100%;
+                                padding: 10px 0;
+                                border-radius: 16px;
+                                border: none;
+                                @include site-transition;
+                                &:hover{
+                                    background-color: $Secondary-Color-Home-1;
+                                    color: $Black-Color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+          Contact End Here
+-------------------------------------------*/

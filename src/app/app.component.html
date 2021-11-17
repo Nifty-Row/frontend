@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<app-header *ngIf="showHeader !== false" [buttonsInfo]="navButtons" [headerInfo]="headerInfo" ></app-header>
+<div>
+  <router-outlet></router-outlet>
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > ... </p></ngx-spinner>
+</div>
+<app-footer [footerInfo]="footerInfo"></app-footer>

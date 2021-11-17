@@ -1,0 +1,52 @@
+{
+    "auctionId": 0,
+    "cancelled": false,
+    "currentBlock": 0,
+    "startBlock": 0,
+    "endBlock": 0,
+    "highestBid": 0,
+    "highestBidder": "0x0000000000000000000000000000000000000000",
+    "bids": [{"bidder": "0x0000000000000000000000000000000000000000", "bid": 0, "auctionId": 0}],
+    "isActive": true,
+    "owner": "0x138eA87255926B6FA5F428079F5266A6693B8738",
+    "sellNowPrice": 0,
+    "title": "Otown Auction",
+    "currentBid": 0,
+    "currency": "ETH",
+    "endDate": "2021-05-09T14:01:08.000Z",
+    "startDate": "2021-05-06T14:01:05.578Z",
+    "minimumBid": 0,
+    "tokenId": "710246",
+    "artwork": {
+        "id": "reno",
+        "category": "artwork",
+        "tags": ["art", "away"],
+        "owner": {
+            "id": "OGW",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo"
+        },
+        "creator": {
+            "id": "Rew",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo",
+            "collections": [],
+            "type": "Creator"
+        },
+        "featuredImage": {
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        },
+        "isBidding": true,
+        "gallery": [{
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        }],
+        "description": "Description",
+        "price": 0,
+        "currency": "ETH",
+        "likes": 0,
+        "type": "Artwork"
+    },
+    "type": "Auction"
+}

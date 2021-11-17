@@ -1,0 +1,32 @@
+  [
+    {
+      "menuGroup": [
+        {
+            "title": "Home",
+            "menu": [],
+            "path": "./demo"
+        },
+        {
+            "title": "Profile",
+            "menu": [],
+            "path": "/profile"
+        },
+        {
+          "title": "Explore",
+          "menu": [ 
+            {
+                "title": "All Creators",
+                "url": "/creators"
+            },
+            {
+              "title": "All Assets",
+              "url": "/assets"
+            }
+          ],
+          "path": "/assets"
+        }
+
+    ],
+    "logoPath": "/assets/img/niftyLogo.png"
+    }
+  ]

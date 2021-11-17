@@ -1,0 +1,188 @@
+[
+    {
+        "id": "reno",
+        "category": "artwork",
+        "tags": ["art", "away"],
+        "owner": {
+            "id": "OGW",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo"
+        },
+        "creator": {
+            "id": "Rew",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo",
+            "collections": [],
+            "type": "Creator"
+        },
+        "featuredImage": {
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        },
+        "isBidding": true,
+        "gallery": [{
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        }],
+        "description": "Description",
+        "price": 23,
+        "currency": "ETH",
+        "dateIssued": "2021-11-11T14:01:08.000Z",
+        "hasActiveAuction": true,
+        "lastAuctionId": 155870,
+        "likes": 34,
+        "sold": false,
+        "name": "Beautyful",
+        "tokenId": 939141,
+        "symbol": "Mine",
+        "type": "Artwork"
+    },
+    {
+        "id": "reno",
+        "category": "artwork",
+        "tags": ["art", "away"],
+        "owner": {
+            "id": "OGW",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo"
+        },
+        "creator": {
+            "id": "Rew",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo",
+            "collections": [],
+            "type": "Creator"
+        },
+        "featuredImage": {
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        },
+        "isBidding": true,
+        "gallery": [{
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        }],
+        "description": "Description",
+        "price": 23,
+        "currency": "ETH",
+        "dateIssued": "2021-11-11T14:01:08.000Z",
+        "lastAuctionId": 155870,
+        "likes": 34,
+        "sold": false,
+        "name": "Beautyful",
+        "tokenId": 939141,
+        "symbol": "Mine",
+        "type": "Artwork"
+    },
+    {
+        "id": "reno",
+        "category": "artwork",
+        "tags": ["art", "away"],
+        "owner": {
+            "id": "OGW",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo"
+        },
+        "creator": {
+            "id": "Rew",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo",
+            "collections": [],
+            "type": "Creator"
+        },
+        "featuredImage": {
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        },
+        "isBidding": true,
+        "gallery": [{
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        }],
+        "description": "Description",
+        "price": 23,
+        "currency": "ETH",
+        "dateIssued": "2021-11-11T14:01:08.000Z",
+        "lastAuctionId": 155870,
+        "likes": 34,
+        "sold": false,
+        "name": "Beautyful",
+        "tokenId": 939141,
+        "symbol": "Mine",
+        "type": "Artwork"
+    },
+    {
+        "id": "reno",
+        "category": "artwork",
+        "tags": ["art", "away"],
+        "owner": {
+            "id": "OGW",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo"
+        },
+        "creator": {
+            "id": "Rew",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo",
+            "collections": [],
+            "type": "Creator"
+        },
+        "featuredImage": {
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        },
+        "isBidding": true,
+        "gallery": [{
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        }],
+        "description": "Description",
+        "price": 23,
+        "currency": "ETH",
+        "dateIssued": "2021-11-11T14:01:08.000Z",
+        "lastAuctionId": 155870,
+        "likes": 34,
+        "sold": false,
+        "name": "Beautyful",
+        "tokenId": 939141,
+        "symbol": "Mine",
+        "type": "Artwork"
+    },
+    {
+        "id": "reno",
+        "category": "artwork",
+        "tags": ["art", "away"],
+        "owner": {
+            "id": "OGW",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo"
+        },
+        "creator": {
+            "id": "Rew",
+            "image": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "username": "Ndo",
+            "collections": [],
+            "type": "Creator"
+        },
+        "featuredImage": {
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        },
+        "isBidding": true,
+        "gallery": [{
+            "media": "https://res.cloudinary.com/xendbit/raw/upload/v1619698206/i4ue53khqd8jhb6wniw8",
+            "mediaType": 0
+        }],
+        "description": "Description",
+        "price": 23,
+        "currency": "ETH",
+        "dateIssued": "2021-11-11T14:01:08.000Z",
+        "lastAuctionId": 155870,
+        "likes": 34,
+        "sold": false,
+        "name": "Beautyful",
+        "tokenId": 939141,
+        "symbol": "Mine",
+        "type": "Artwork"
+    }
+]

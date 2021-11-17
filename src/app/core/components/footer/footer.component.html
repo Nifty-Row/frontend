@@ -1,0 +1,116 @@
+
+<!--=======================================
+            Footer Section Start Here
+    ========================================-->
+
+    <div class="footer-main">
+      <div class="container-fluid">
+          <div class="row row-custom">
+              <div class="col-lg-3 col-md-12 col-log-otr">
+                  <div class="col-logo-inr">
+                      <a href="" class="logo-otr" *ngIf="this.footerData !== null">
+                          <img class="logo-img" src="{{this.footerData.logoPath}}" alt="brand-logo">
+                      </a>
+                      <ul class="icon-ul">
+                          <li class="icon-li">
+                              <a href="" class="icon-a">
+                                  <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 11h-2a3 3 0 00-3 3v14M12 18h8" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                              </a>
+                          </li>
+                          <li class="icon-li">
+                              <a href="" class="icon-a">
+                                  <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 25s5-1 6-4c0 0-8-3-6-14 0 0 4 5 10 6v-2a5 5 0 019.584-2H30l-4 4c0 7-5 14-14 14-4 0-6-2-6-2z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                              </a>
+                          </li>
+                 
+                      
+                          <li class="icon-li">
+                              <a href="" class="icon-a">
+                                  <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 16l-6-4v8l6-4z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16c0 3.72.384 5.902.676 7.023a1.99 1.99 0 001.204 1.362C9.065 25.993 16 25.95 16 25.95s6.935.044 11.12-1.564a1.99 1.99 0 001.204-1.362C28.616 21.902 29 19.72 29 16c0-3.72-.384-5.902-.676-7.023a1.99 1.99 0 00-1.205-1.362C22.935 6.007 16 6.05 16 6.05S9.065 6.007 4.88 7.615a1.99 1.99 0 00-1.204 1.362C3.384 10.098 3 12.28 3 16z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                              </a>
+                          </li>
+                          <li class="icon-li">
+                              <a href="" class="icon-a">
+                                  <svg class="icon" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.859l11.24 9.89a1 1 0 001.635-.527l4.702-20.516a1 1 0 00-1.34-1.154l-23.07 9.063a1 1 0 00.17 1.911L11 16.86zM11 16.86L28.014 4.57" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.613 21.799l-3.906 3.906A1 1 0 0111 24.998v-8.14" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-nav-otr" *ngFor="let links of footerData.menuGroup">
+                  <div class="col-nav-inr" >
+                      <h5 class="heading-h5 nav-head">{{links.title}}</h5>
+                      <ul class="nav-ul" *ngFor="let link of links.menu">
+                          <li class="nav-li">
+                              <a href="{{link.url}}" class="nav-a body-sb">{{link.title}}</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-subscribe-otr">
+                  <app-subscribe></app-subscribe>
+              </div>
+          </div>
+      </div>
+      <img class="circle-1" src="assets/img/svg/footer-circles1.svg" alt="footer-circle">
+      <img class="circle-2" src="assets/img/svg/footer-circles2.svg" alt="footer-circle">
+  </div>
+
+<!--=======================================
+      Footer Section End Here
+========================================-->
+
+
+  <!--=======================================
+          Copy Section Start Here
+  ========================================-->
+
+  <div class="copy-otr">
+      <div class="container-fluid">
+          <div class="copy-inr">
+              <div class="language-selector">
+                  <ul class="language-ul">
+                      <li class="language-li">
+                          <a class="language-a">
+                              <img class="flag-img" src="assets/img/flag-img1.png" alt="flag-img">
+                              <p class="body-sb language">English</p>
+                              <svg class="caret-down" width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1.5l-5 5-5-5" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                          </a>
+                          <ul class="drop-ul">
+                              <li class="drop-li">
+                                  <a href="" class="drop-a">
+                                      <img class="flag-img" src="assets/img/flag-img1.png" alt="flag-img">
+                                      <p class="body-sb language">English</p>
+                                  </a>
+                              </li>
+                              <li class="drop-li">
+                                  <a href="" class="drop-a">
+                                      <img class="flag-img" src="assets/img/flag-img2.png" alt="flag-img">
+                                      <p class="body-sb language">Pakistan</p>
+                                  </a>
+                              </li>
+                              <li class="drop-li">
+                                  <a href="" class="drop-a">
+                                      <img class="flag-img" src="assets/img/flag-img3.png" alt="flag-img">
+                                      <p class="body-sb language">UAE</p>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+              <div class="copy-name body-s">
+                  Copyright © 2021 by <a href="https://niftyrow.io" target="_blank" class="name body-sb">Nifty Row.</a> All rights reserved.
+              </div>
+              <div class="privacy-link">
+                  <a href="pages/Privacy-Policy.html" class="link body-sb">Privacy Policy</a>
+                  <span class="dot">•</span>
+                  <a href="pages/Terms-of-Services.html" class="link body-sb">Terms of Service</a>
+              </div>
+          </div>
+      </div>    
+  </div>
+
+<!--=======================================
+      Copy Section End Here
+========================================-->

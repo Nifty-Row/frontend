@@ -1,0 +1,73 @@
+.col-lg-3 {
+    flex: 0 0 auto;
+    width: 115% !important;
+}
+
+.row>* {
+    flex-shrink: 0;
+    /* width: 100%; */
+    max-width: 115%;
+    padding-right: calc(var(--bs-gutter-x)/ 2);
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+    margin-top: var(--bs-gutter-y);
+}
+
+#countdown {
+    position: absolute;
+    width: 150px;
+    height: 52px;
+    background-color: #366CE3;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 16px;
+}
+
+#anchorMedia {
+    margin-bottom: 23px;
+}
+
+audio::-webkit-media-controls-panel{
+    border-top-left-radius: -10px;
+}
+    
+
+@media (max-width: 600px){
+    .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .box1, .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .box2, .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .box3, .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .box4, .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .box5, .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .box6, .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .box7 {
+        margin-bottom: 24px;
+        width: 100%;
+        margin-left: -15px;
+        margin-right: 22px;
+    }
+
+    #countdown {
+        position: absolute;
+        width: 41%;
+        height: 52px;
+        background-color: #366CE3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 18px;
+        color: white;
+        border-radius: 16px;
+    }
+
+    #currentBid {
+        width: 61%;
+        margin-left: 41%;
+    }
+
+    #anchorMedia {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 991px) {
+    #anchorMedia {
+      margin-bottom: 0px;
+    }
+  }

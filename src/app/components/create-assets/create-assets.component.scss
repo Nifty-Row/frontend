@@ -1,0 +1,389 @@
+@import 'src/assets/scss/utilities/screens';
+@import 'src/assets/scss/utilities/mixins';
+@import 'src/assets/scss/utilities/variables';
+@import 'src/assets/scss/utilities/settings';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+
+
+/*------------------------------------------
+            Create Start Here
+-------------------------------------------*/
+
+#issuerInput {
+    margin-bottom: 10px; 
+    margin-top: 10px;
+}   
+
+.create-main{
+    padding: 96px 0 128px 0;
+    @include breakpoint($secreen-max-sm){
+        padding: 56px 0 80px 0 !important;
+    }
+    .container-fluid{
+        .create-inr{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .col-heading-otr{
+                .heading-inr{
+                    .heading{
+                        color: $Black-Color;
+                    }
+                }
+            }
+        }
+        .line{
+            display: flex;
+            flex: 1;
+            height: 1px;
+            background-color: $Gray-Shade-3;
+            margin: 36px 0;
+        }
+        .row-custon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .col-create-otr{
+                .col-create-inr{
+                    .head{
+                        color: $Black-Color;
+                    }
+                    .head-2{
+                        color: $Black-Color;
+                        margin: 0 0 24px 0;
+                    }
+                    .form-main{
+                        .head-2{
+                            color: $Black-Color;
+                        }
+                        .input-otr{
+                            .input{
+                                width: 100%;
+                            }
+                        }
+                        .input-otr{
+                            margin: 0 0 30px 0;
+                            .textarea{
+                                padding: 16px 24px;
+                                height: 130px;
+                                appearance: none;
+                                resize: none;
+                            }
+                        }
+                        .input-otr-select{
+                            margin: 0 0 36px 0;
+                        }
+                        .input-main{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            margin: 0 0 36px 0;
+                            @include breakpoint($secreen-xs){
+                                flex-direction: column;
+                            }
+                            .input-otr-2{
+                                width: 50%;
+                                @include breakpoint($secreen-xs){
+                                    width: 100%;
+                                }
+                                &:not(:last-child){
+                                    margin: 0 30px 0 0;
+                                    @include breakpoint($secreen-xs){
+                                        margin: 0 0 30px 0;
+                                    }
+                                }
+                                .input{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .check{
+                        display: flex;
+                        justify-content: space-between;
+                        label{
+                            display: flex;
+                            align-items: center;
+                            margin: 0;
+                            .check-inner{
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                flex-shrink: 0;
+                                margin-right: 12px;
+                                border: 1px solid $Gray-Shade-3;
+                                position: relative;
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                                .input-check{
+                                    opacity: 0;
+                                    position: absolute;
+                                    &:hover{
+                                    cursor: pointer;
+                                    }
+                                }
+                                .input-check:checked + .fill-current {
+                                    display: block;
+                                    width: 16px;
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    border-radius: 50%;
+                                }
+                                .fill-current{
+                                    display: none;
+                                    width: 16px;
+                                    height: 16px;
+                                    pointer-events: none;
+                                    position: relative;
+                                    left: -1px;
+                                    top: -1px;
+                                }
+                            }
+                            .select-none{
+                                line-height: 28px;
+                                .terms{
+                                    display: inline;
+                                }
+                            }
+                        }
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            right: 0;
+                            height: 1px;
+                            top: 22px;
+                            width: 0%;
+                            transition: .3s;
+                        }
+                    }
+                    .desc{
+                        color: $Gray-Shade-1;
+                        margin: 10px 0 16px 0;
+                    }
+                    .desc-2{
+                        color: $Gray-Shade-1;
+                        margin: 10px 0 36px 0;
+                    }
+                    .row-custom-inr{
+                        .col-box-otr{
+                            .col-box-inr{
+                                background-color: $Gray-Shade-4;
+                                padding: 28px 24px 24px 24px;
+                                border-radius: 24px;
+                                cursor: pointer;
+                                transition: .3s;
+                                border: 2px solid transparent;
+                                &:hover{
+                                    background-color: $White-Color;
+                                    box-shadow: $box-shadow-custom;
+                                }
+                                .img-otr-1{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 52px;
+                                    height: 52px;
+                                    border-radius: 100%;
+                                    background-color: $Primary-Color-Home-1;
+                                    cursor: pointer;
+                                }
+                                .img-otr{
+                                    margin: 0 0 12px 0;
+                                    .img-profile{
+                                        width: 52px;
+                                        height: 52px;
+                                        border-radius: 12px;
+                                    }
+                                }
+                                .heading{
+                                    color: $Black-Color;
+                                    @include breakpoint($secreen-max-lg){
+                                        br{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .box-1,.box-2{
+                                @include breakpoint($secreen-max-sm){
+                                    margin: 0 0 24px 0;
+                                }
+                            }
+                            .box-1,.box-2,.box-3{
+                                @include breakpoint($secreen-xs){
+                                    margin: 0 0 24px 0;
+                                }
+                            }
+                            .active-border{
+                                border: 2px solid $Primary-Color-Home-1;
+                            }
+                        }
+                        .col-btn-otr{
+                            .col-btn-inr{
+                                margin: 48px 0 0 0;
+                                text-align: center;
+                                .btn-create{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------
+            Create Start Here
+-------------------------------------------*/
+
+.upload-area {
+    width: 100%;
+    background-color: $Gray-Shade-4;
+    border-radius: 24px;
+    text-align: center;
+    padding: 36px 0 40px 0;
+    border: 2px dashed $Gray-Shade-3;
+    margin: 24px 0 36px 0;
+    @include breakpoint($secreen-xxs){
+        padding: 15px;
+    }
+    .upload-area--open {
+        animation: slidDown 500ms ease-in-out;
+    }
+    .upload-area__header {
+        .upload-area__paragraph{
+            .upload-area__tooltip {
+                position: relative;
+                cursor: pointer;
+                transition: color 300ms ease-in-out;
+                &:hover{
+                    color: var(--clr-blue);
+                    .upload-area__tooltip-data {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .upload-area__tooltip-data {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -125%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: none 300ms ease-in-out;
+                }
+            }
+        }
+    }
+    .upload-area__drop-zoon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        .drop-zoon__icon {
+            display: flex;
+            font-size: 3.75rem;
+            color: $Primary-Color-Home-1;
+        }
+        .desc{
+            color: $Gray-Shade-1;
+            margin: 12px 0 20px 0;
+            @include breakpoint($secreen-xxs){
+                margin: 12px 0 8px;
+            }
+        }
+        .drop-zoon__paragraph {
+            margin: 0;
+            transition: opacity 300ms ease-in-out;
+        }
+        .drop-zoon__loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            color: var(--clr-light-blue);
+            z-index: 10;
+        }
+        .drop-zoon__preview-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 232px;
+            object-fit: contain;
+            display: none;
+            z-index: 1000;
+        }
+        .drop-zoon__file-input {
+            display: none;
+        }
+    }
+}
+@keyframes slidDown {
+    from {
+        height: 28.125rem;
+    }
+
+    to {
+        height: 35rem;
+    }
+}
+
+.drop-zoon__paragraph{
+    &:hover{
+        transform: translateY(0) !important;
+    }
+}
+
+.drop-zoon:hover .drop-zoon__icon,
+.drop-zoon:hover .drop-zoon__paragraph {
+    opacity: 0.7;
+}
+.drop-zoon:hover .drop-zoon__preview-image {
+    opacity: 1;
+} 
+.drop-zoon--over .drop-zoon__icon,
+.drop-zoon--over .drop-zoon__paragraph {
+    opacity: 0.7;
+}
+
+.drop-zoon--Uploaded .drop-zoon__icon,
+.drop-zoon--Uploaded .drop-zoon__paragraph {
+    opacity: 0;
+}
+.drop-zoon--Uploaded .drop-zoon__icon,
+.drop-zoon--Uploaded .desc {
+    opacity: 0;
+    margin: 52px 0 30px 0;
+}
+
+@keyframes progressMove {
+    from {
+        width: 0%;
+        background-color: transparent;
+    }
+
+    to {
+        width: 100%;
+        background-color: var(--clr-blue);
+    }
+}
+
+@media screen and (max-width: 640px){
+    :host ::ng-deep .p-dialog {
+        width: 83vw !important;
+    }
+}
+
+.upload-area .upload-area__drop-zoon .drop-zoon__preview-image{
+    height: 100%;
+}

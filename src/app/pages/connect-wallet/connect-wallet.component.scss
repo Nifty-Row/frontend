@@ -1,0 +1,77 @@
+@import 'src/assets/scss/utilities/screens';
+@import 'src/assets/scss/utilities/mixins';
+@import 'src/assets/scss/utilities/variables';
+@import 'src/assets/scss/utilities/settings';
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+.connect-wallet{
+    margin: 96px 0 128px 0;
+    .container{
+        .col-head-otr{
+            margin: 0 auto;
+            .connect-heading{
+                color: $Black-Color;
+            }
+        }
+        .line{
+            width: 100%;
+            height: 1px;
+            background-color: $Gray-Shade-3;
+            margin: 36px 0;
+            display: flex;
+        }
+        .col-connect-otr{
+            margin: 0 auto;
+            .col-connect-inr{
+                .desc{
+                    color: $Gray-Shade-1;
+                    margin: 0 0 36px 0;
+                    .desc-inr{
+                        color: $Primary-Color-Home-1;
+                    }
+                }
+                .row-boxes{
+                    .col-box-otr{
+                        .box-inr{
+                            background-color: white;
+                            /* border-color: #F2F2F2; */
+                            box-shadow: 0 0 10px;
+                            border-radius: 24px;
+                            padding: 28px 24px 20px 24px;
+                            transition: 0.3s;
+                            &:hover{
+                                background-color: $Primary-Color-Home-1;
+                                .head{
+                                    color: $White-Color;
+                                }
+                            }
+                            .icon-otr{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 12px;
+                                background-color: $White-Color;
+                                box-shadow: $box-shadow-custom;
+                                margin: 0 0 12px 0;
+                            }
+                            .head{
+                                color: $Black-Color;
+                                transition: .3s;
+                            }
+                        }
+                        .box-1,.box-2,.box-3{
+                            margin: 0 0 24px 0;
+                        }
+                        .box-1,.box-2,.box-3,.box-4,.box-5{
+                            @include breakpoint($secreen-xs){
+                                margin: 0 0 24px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "create": {
+            "title": "Mint",
+            "path": "mint"
+        },
+        "wallet": {
+            "title": "Connect Wallet",
+            "path": "connect-wallet"
+        }
+    }
+]

@@ -1,0 +1,179 @@
+
+    <!--=======================================
+            Hero Section Start Here
+    ========================================-->
+    <div class="main-hero" [ngSwitch]="presentationData['presentationType']">
+        <div class="hero-main-inr"  *ngSwitchDefault>
+            <p-galleria [(value)]="presentationData.slides" *ngIf="presentationData.slides"  [containerStyle]="{'width': '100%'}" [numVisible]="1"
+            [showItemNavigators]="true" [showThumbnails]="false" [showIndicators]="true" [showItemNavigatorsOnHover]="true"
+            [showIndicatorsOnItem]="true" [responsiveOptions]="responsiveOptions" [circular]="true"> 
+                <ng-template pTemplate="item" let-item>
+                    <img [src]="item.artwork.featuredImage.media" style="width: 100%; display: block; height: 600px; object-fit: cover;" />
+                </ng-template>
+             
+                <ng-template pTemplate="caption" let-item style="height: 16rem;">
+                    <div class="p-galleria">
+                        <div class="p-galleria-caption">
+                            <h4 style="margin-bottom: .5rem; color: #ffffff; font-size: 2.5rem;">{{item.title}}</h4>
+                            <p style="font-size: 1.5rem;">{{item.subtitle}}</p>
+                            <!-- <div class="action-otr">
+                                <a id="slideButton" class="btn-fill btn-create">Place a Bid</a>
+                                <a id="slideButton" style="color: black" class="btn-outline2 btn-wallet">View Artwork</a>
+                            </div> -->
+                        </div>
+                      
+                    </div>
+                    
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="hero-main-inr"   *ngSwitchCase="'1'">
+        </div>
+        <div class="hero-main-inr"   *ngSwitchCase="'2'">
+
+        </div>
+        <div class="hero-main-inr"   *ngSwitchCase="'3'">
+
+        </div>
+    </div>
+  
+<!-- 
+    <div class="main-hero" [ngSwitch]="slider.type"  *ngFor="let item of slider ">
+        <div class="hero-main-inr"  *ngSwitchDefault>
+
+
+            <div class="hero-mainn" >
+                <div class="container-fluid">
+                    <div class="hero-inr">
+                        <div class="row row-custom">
+                            <div class="col-lg-6 col-content-otr">
+                                <div class="col-content-inr" >
+                                    <div class="head-otr" >
+                                        <h1 class="heading-h1 heading titleGreathorned">
+                                        {{item.title}}
+                                        </h1>
+                                    </div>
+                                    <div class="boxes-main">
+                                        <div class="bid-main">
+                                            <p class="bid body-mb">Current Bid</p>
+                                            <h3 class="heading-h3 bid-head">{{item.currentBid}} {{item.currency}}</h3>
+                                            <p class="dollor body-mb">{{this.auctionValue | currency}}</p>
+                                        </div>
+                                        <div class="auction-main" >
+                                            <p class="body-mb acution">Auction Ending</p>
+                                            <div id="clock" class="timer">
+                                                <div class="hours-main main">
+                                                    <p class="heading-h3 time-inr" id="hours"> {{this.countdownDay}} </p>
+                                                    <p class="hours-p body-mb">Days</p>
+                                                </div>
+                                                <div class="hours-main main">
+                                                    <p class="heading-h3 time-inr" id="hours"> {{this.countdownHours}} </p>
+                                                    <p class="hours-p body-mb">Hours</p>
+                                                </div>
+                                                <div class="minutes-main main">
+                                                    <p class="heading-h3 time-inr" id="minutes"> {{this.countdownMinutes}} </p>
+                                                    <p class="minutes-p body-mb">Minutes</p>
+                                                </div>
+                                                <div class="seconds-main main">
+                                                    <p class="heading-h3 time-inr" id="seconds"> {{this.countdownSeconds}}</p>
+                                                    <p class="seconds-p desktop body-mb">Seconds</p>
+                                                    <p class="seconds-p mobile body-mb">Sec</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="action-otr">
+                                        <a (click)="placeBid()" class="btn-fill btn-create">Place a Bid</a>
+                                        <a  class="btn-outline2 btn-wallet">View Artwork</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-img-otr">
+                                <div class="col-img-inr">
+                                    <a href="" class="img-otr img-tilt" data-tilt>
+                                        <img class="artwork-img img-fluid" src="{{item.artwork.featuredImage.media}}" alt="artwork-img">
+                                    </a>
+                                    <div class="create-otr">
+                                        <div class="create-inr">
+                                            <a (click)="goToCreatorPage()" class="create-img">
+                                                <img class="img-create" src="{{item.artwork.creator.image}}" alt="create-img">
+                                                <div class="check-otr">
+                                                    <svg class="check-icon" width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.438 2.813L4.061 7.188 1.876 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                </div>
+                                            </a>
+                                            <div class="create-content">
+                                                <p class="body-s create-p">Owned by</p>
+                                                <a (click)="goToOwnerPage()" class="body-sb create-pb">{{item.artwork.owner.username}}</a>
+                                            </div>
+                                            <div class="hover-box">
+                                                <div class="hover-box-inr">
+                                                    <div class="user-info">
+                                                        <a (click)="goToOwnerPage()" class="create-img">
+                                                            <img class="img-create" src="{{item.artwork.owner.image}}" alt="create-img">
+                                                            <div class="check-otr">
+                                                                <svg class="check-icon" width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.438 2.813L4.061 7.188 1.876 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                            </div>
+                                                        </a>
+                                                        <a *ngIf="this.followInfo.followCount < 1" (click)="follow(item.artwork.owner.username)" class="btn-outline2 follow-btn">Follow</a>
+                                                        <a *ngIf="this.followInfo.followCount === 1"  class="btn-outline2 follow-btn">Followed</a>
+                                                    </div>
+                                                    <p class="post-title body-lb">{{item.artwork.owner.username}}</p>
+                                                    <a href="#" class="address-main">
+                                                        <p class="address body-s">{{item.owner.substring(0, 8) + 'xxxxx' + item.owner.slice(item.owner.length - 8)}}</p>
+                                                        <svg (click)="copyMessage(item.owner)" class="copy-icon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.636 12.636H15a2 2 0 002-2V3a2 2 0 00-2-2H7.364a2 2 0 00-2 2v2.364" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.636 5.364H3a2 2 0 00-2 2V15a2 2 0 002 2h7.636a2 2 0 002-2V7.364a2 2 0 00-2-2z" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                                    </a>
+                                                    <p class="post-desc body-s">
+                                                        {{item.artwork.description}}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="heart-main">
+                                            <a class="heart-otr" (click)="like(item.artwork.tokenId)">
+                                                <svg class="heart-icon" width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 15.08S1 10.6 1 5.16a4.16 4.16 0 018-1.603h0a4.16 4.16 0 018 1.603c0 5.44-8 9.92-8 9.92z" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            </a>
+                                            <p class="body-sb num" *ngIf="this.likes.likeCount === 1" >{{this.likes.likeCount }} Like</p>
+                                            <p class="body-sb num" *ngIf="this.likes.likeCount !== 1" >{{this.likes.likeCount }} Likes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-gradient">
+                                    <div class="bg-gradient-inr">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient">
+                    <div class="bg-gradient-inr">
+                        <marquee class="marq1" amount="2" direction="left">
+                            <ul class="marq-ul">
+                                <li class="marq-li">{{item.title}}</li>
+                            </ul>
+                        </marquee>
+                        <marquee class="marq2" amount="2" direction="right">
+                            <ul class="marq-ul">
+                                <li class="marq-li">{{item.title}}</li>
+                            </ul>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+                
+
+
+
+            <img class="shape" src="../assets/img/svg/home2-shape.svg" alt="shape">
+        </div>
+        <div class="hero-main-inr"   *ngSwitchCase="'Creator'">
+
+        </div>
+        <div class="hero-main-inr"   *ngSwitchCase="'ArtWork'">
+
+        </div>
+        <div class="hero-main-inr"   *ngSwitchCase="'Collection'">
+
+        </div>
+    </div>
+ -->

@@ -1,0 +1,251 @@
+<p-toast position="top-center" ></p-toast>
+<p-dialog [(visible)]="displayOverlay" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false"  [breakpoints]="{'960px': '75vw', '640px': '83vw'}" [style]="{width: '40vw'}">
+    <ng-template pTemplate="header">
+        <h4 class="head-2 heading-h4">Issuer Registration</h4>
+    </ng-template>
+    <form class="form-main" method="post"  #registerForm="ngForm">
+        <span class="select-none heading-h5">Please complete the form below: </span>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="firstName" name="firstName" [(ngModel)]="firstName" placeholder="First Name" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="middleName" name="middleName" [(ngModel)]="middleName" placeholder="Middle Name" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="lastName" name="lastName" [(ngModel)]="lastName" placeholder="Last Name" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="Email" name="email" [(ngModel)]="email" placeholder="Email" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="phone" id="phone" name="phone" [(ngModel)]="phone" placeholder="Phone Number" required>
+        </div>
+        <div class="input-main">
+            <div class="input-otr-2" id="issuerInput">
+                <input style="width: 100%;" class="input" [(ngModel)]="bankName" type="text" name="bankName" placeholder="Bank Name" required>
+            </div>
+            <div class="input-otr-2" id="issuerInput">
+                <input style="width: 100%;" [(ngModel)]="bankAddress" class="input" type="text" name="bankAddress" placeholder="Bank Address " required>
+            </div>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="accountName" name="accountName" [(ngModel)]="accountName" placeholder="Account Name" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="number" id="accountNumber" name="accountNumber" [(ngModel)]="accountNumber" placeholder="Account Number" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="bankCode" name="bankCode" [(ngModel)]="bankCode" placeholder="Bank Code" required>
+        </div>
+        <div class="input-otr" id="issuerInput">
+            <input class="input" style="width: 100%;" type="text" id="iban" name="iban" [(ngModel)]="iban" placeholder="IBAN" required>
+        </div>
+    </form>
+    <ng-template pTemplate="footer">
+
+        <p-button icon="pi pi-check" (click)="register(registerForm)" label="Register" class="p-button-text"></p-button>
+        <p-button icon="pi pi-times" (click)="displayModal=false" label="Cancel"></p-button>
+    </ng-template>
+</p-dialog>
+    <!--=======================================
+                Create Start Here
+    ========================================-->
+    <div class="create-main">
+        <div class="container-fluid">
+            <div class="row create-inr">
+                <div class="col-lg-8 col-heading-otr">
+                    <div class="heading-inr">
+                        <h3 class="heading heading-h3">Create Single Artwork</h3>
+                    </div>
+                </div>
+            </div>
+            <span class="line"></span>
+           
+            <div class="row row-custon">
+                <div class="col-lg-8 col-create-otr">
+                    <div class="col-create-inr">
+                        <h4 class="head heading-h4">Upload Artwork</h4>
+                        <div id="uploadArea" class="upload-area">
+                            <div class="upload-area__header">
+                                <p class="upload-area__title"></p>
+                                <p class="upload-area__paragraph">
+                                    <strong class="upload-area__tooltip">
+                                        <span class="upload-area__tooltip-data"></span>
+                                    </strong>
+                                </p>
+                            </div>
+                            <div class="upload-area__drop-zoon drop-zoon" ngfDrop selectable="1" multiple="1"
+                            [(files)]="files"
+                            [(file)] = "preview"
+                            [(validDrag)]="validComboDrag"
+                            [maxSize]=10485760
+                            [ngClass]="{'goodDragClass':validComboDrag}" (fileChange)="check(preview)">
+                                <span class="drop-zoon__icon">
+                                    <svg class="upload-icon" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 12.81L20 6.25l6.563 6.56M20 23.75V6.255M33.75 23.75v8.75a1.25 1.25 0 01-1.25 1.25h-25a1.25 1.25 0 01-1.25-1.25v-8.75" stroke="#366CE3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <p class="desc body-sb">PNG, GIF, JPEG, JPG, MP4 or MP3. Max 10 MB.</p>
+                                <p class="drop-zoon__paragraph btn-outline1">browse</p>
+                                <!-- <label (change)="uploadFile($event)" class="drop-zoon__paragraph btn-outline1">browse
+                                    <input type="file" id="images" class="drop-zoon__file-input"  #fileInput>
+                                </label> -->
+                            </div>
+                        </div>
+                        <p *ngIf="errorMessage" class="desc body-sb" style="color: red;">{{errorMessage}}</p>
+
+                        <div class="drop-zoon__preview-image" *ngIf="this.preview !== undefined">
+                            <!-- <p-galleria *ngIf="this.media.length > 0" [(value)]="media"  [containerStyle]="{'max-width': '640px', 'margin-top':'2em'}" [numVisible]="5"
+                                [circular]="true" [showItemNavigators]="true" [showThumbnails]="false" [showIndicators]="true" [showItemNavigatorsOnHover]="true"
+                                [showIndicatorsOnItem]="true"> 
+                                <ng-template pTemplate="item" let-item>
+                                    <img [src]="item" style="width: 100%; display: block;" />
+                                </ng-template>
+                                <ng-template pTemplate="thumbnail" let-item>
+                                    <div class="p-grid p-nogutter p-justify-center">
+                                        <img [src]="item" style="display: block;" />
+                                    </div>
+                                </ng-template>
+                            </p-galleria> -->
+                            <div class="img-main" *ngIf="this.preview.type.includes('image')">
+                                <img [ngfSrc]="preview" style="width: 100%; height: 100%;" alt="Preview Image" id="previewImage" class="drop-zoon__preview-image" draggable="false">
+                            </div>
+                            <div class="img-main" *ngIf="this.preview.type.includes('audio')">
+                                <audio class="AudioPlayerV1" style="width: 100%;"  controls controlsList="nodownload">
+                                    <source [src]="preview" type="audio/mp3" />
+                                    <source [ngfSrc]="preview" type="audio/ogg" />
+                                    <source [ngfSrc]="preview" type="audio/wav" />
+                                </audio>
+                            </div>
+                            
+                            <div class="img-main" *ngIf="this.preview.type.includes('video')">
+                                <video class="img-inr img-fluid" style="object-fit: cover;"  controls controlsList="nodownload">
+                                    <source [src]="preview" type="video/mp4" />
+                                    <source [ngfSrc]="preview" type="video/webm" />
+                                    <source [ngfSrc]="preview" type="video/ogg" />
+                                </video>
+                            </div>
+                        </div>
+                        <!-- <table class="table" *ngIf="this.media.length > 0">
+                            <thead>
+                                <tr>
+                                    <th class="desc body-sb">Name</th>
+                                    <th class="desc body-sb">Media Type</th>
+                                    <th class="desc body-sb">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of media" (click)="assignPreview(item.media)">
+                                    <td class="input-otr">{{item.media.name}}</td>
+                                    <td class="input-otr">{{item.media.type}}</td>
+                                    <td class="input-otr"> <button class="drop-zoon__paragraph btn-outline1" (click)="remove(item.index)"> Remove </button> </td>
+                                </tr>
+                                                  
+                            </tbody>
+                        </table> -->
+                        
+                       
+                        <form class="form-main" method="post"  #createForm="ngForm">
+                            <h4 class="head-2 heading-h4">Artwork Details</h4>
+                            <div class="input-otr">
+                                <input class="input" type="text" id="artName" name="artName" [(ngModel)]="title" placeholder="Artwork Name e.g. “Floating Nifty Row”" required>
+                            </div>
+                            
+                            <div class="input-otr">
+                                <textarea class="textarea input" id="description"   
+                                name="description" [(ngModel)]="description" placeholder="Artwork Description e.g. “ Floating Nifty Row 3D”" required></textarea>
+                            </div>
+                            <div class="row" style="margin-bottom: 20px;">
+                                <div class="col-xs-4 col-sm-4 col-md-4" *ngFor="let item of categories;">
+                                    <div class="check" >
+                                        <label>
+                                            <span class="check-inner">
+                                                <input type="checkbox" (change)="pickedCategory(item.value)" class="input-check opacity-0 absolute">
+                                                <svg class="fill-current" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="#366CE3"/></svg>
+                                            </span>
+                                            <span class="select-none heading-h5">{{item.name}}</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> 
+                           
+                            <h4 class="head-2 heading-h4">Properties</h4>
+                            <div class="input-main">
+                                <div class="input-otr-2">
+                                    <input class="input" [(ngModel)]="symbol" type="text" name="symbol" placeholder="Asset Symbol e.g. FNR" required>
+                                </div>
+                                <div class="input-otr-2">
+                                    <input class="input" type="text" name="text" placeholder="Asset Tag e.g. 'African' " required>
+                                </div>
+                            </div>
+                      
+                            <div class="row" style="margin-bottom: 20px;">
+                                <div class="col-xs-4 col-sm-4 col-md-4" *ngFor="let item of assetTypes;">
+                                    <div class="check" >
+                                        <label>
+                                            <span class="check-inner">
+                                                <input type="checkbox" (change)="getAssetType(item.value)" class="input-check opacity-0 absolute">
+                                                <svg class="fill-current" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8" fill="#366CE3"/></svg>
+                                            </span>
+                                            <span class="select-none heading-h5">{{item.name}}</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> 
+                        </form>
+                        <h4 class="head-2 heading-h4">Choose Collection</h4>
+                        <div class="row row-custom-inr">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-box-otr">
+                                <div class="col-box-inr box-1">
+                                    <div class="img-otr img-otr-1">
+                                        <svg class="circle" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".2" d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" fill="#fff"/><path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="#fff" stroke-width="2" stroke-miterlimit="10"/><path d="M11 16h10M16 11v10" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <h5 class="heading heading-h5">Create <br> Collection</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-box-otr">
+                                <div class="col-box-inr box-2">
+                                    <div class="img-otr">
+                                        <img class="img-profile" src="../assets/img/user-Image16.jpg" alt="img">
+                                    </div>
+                                    <h5 class="heading heading-h5">Brainy Nerds <br> Today</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-box-otr">
+                                <div class="col-box-inr box-3">
+                                    <div class="img-otr">
+                                        <img class="img-profile" src="../assets/img/user-Image10.jpg" alt="img">
+                                    </div>
+                                    <h5 class="heading heading-h5">The Abstract <br> Geniuses</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-box-otr">
+                                <div class="col-box-inr box-4">
+                                    <div class="img-otr">
+                                        <img class="img-profile" src="../assets/img/user-Image17.jpg" alt="img">
+                                    </div>
+                                    <h5 class="heading heading-h5">The 3D World <br> of Fantasy</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-3 col-sm-6 col-btn-otr">
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-btn-otr">
+                                <!-- <div class="col-btn-inr" >
+                                    <a (click)="mint(createForm)" class="btn-fill btn-create">Create Artwork</a>
+                                </div> -->
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-btn-otr">
+                                <div class="col-btn-inr" >
+                                    <a (click)="mint(createForm)" class="btn-fill btn-create">Create Artwork</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--=======================================
+            Create End Here
+========================================-->
+

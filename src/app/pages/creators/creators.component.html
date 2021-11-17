@@ -1,0 +1,62 @@
+
+    <!--=======================================
+           Popular Collections Start Here
+    ========================================-->
+
+    <div class="popular-collection-home2">
+        <div class="container-fluid">
+            <div class="popular-collection-inr">
+                <div class="heading-otr">
+                    <div class="head-otr">
+                        <h3 class="heading heading-h3">Explore Creators</h3>
+                    </div>
+                     <!-- <select id="year">
+                        <option class="linkk" value="hide">Sort by</option>
+                        <option class="linkk" value="2010">All Artworks</option>
+                        <option class="linkk" value="2011">Sort by</option>
+                        <option class="linkk" value="2012">All Artworks</option>
+                        <option class="linkk" value="2013">Sort by</option>
+                    </select> -->
+                </div>
+                <span class="line"></span>
+                <div class="row row-custom " id="popular-collection-home2">
+                    <div class="col-otr owl-carousel owl-theme" *ngFor="let creator of creators; trackBy: byId;">
+                        <div class="col-inr">
+                            <a  class="img-otr">
+                                <img *ngIf="creator.displayImage === ''" class="img img-fluid" src="/assets/img/cover-img8.jpg" alt="artwork-img">
+                                <img *ngIf="creator.displayImage !== ''" class="img img-fluid" src="{{creator.displayImage}}" alt="artwork-img">
+                            </a>
+                            <div class="user-profile">
+                                <a class="user-img-otr">
+                                    <img *ngIf="creator.displayImage === ''" class="user-img-inr" src="/assets/img/user-profile-default-image.png" alt="creator-img">
+                                    <img *ngIf="creator.displayImage !== ''" class="user-img-inr" src="{{creator.displayImage}}" alt="creator-img">
+                                </a>
+                                <div class="user-content">
+                                    <a href="" class="title body-mb">{{creator.username}}</a>
+                                    <p class="body-s collect-by"> Value <a href="" class="body-sb username">{{creator.assetTotalValue}} ETH</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                    </div>
+                    <div class="col-lg-4 col-btn-otr">
+                        <div class="col-btn-inr">
+                            <a (click)="loadMore()" class="btn-outline1 btn-more">Load More Creators</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"> 
+                    </div>
+
+                </div>
+                   
+               
+            </div>
+        </div>
+    </div>
+
+<!--=======================================
+        Popular Collections End Here
+========================================-->
